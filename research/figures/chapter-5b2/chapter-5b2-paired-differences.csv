@@ -1,0 +1,2 @@
+condition,baseline,metric,mean_difference,mean_difference_is,ci_low,ci_high,winner
+mappo,central_gcs,detection_probability_within_limit,-0.3104,mappo minus mappo,-0.35760000000000003,-0.26610000000000006,mappo

@@ -1,0 +1,662 @@
+{
+  "aoi_design": {
+    "configured_search_radius_m": 5436.3,
+    "containment_probability": 0.99,
+    "containment_trade_off": [
+      {
+        "area_ratio_vs_current": 0.6968074122854173,
+        "containment": 0.9,
+        "search_radius_m": 4537.950935864583
+      },
+      {
+        "area_ratio_vs_current": 0.8132558223507663,
+        "containment": 0.95,
+        "search_radius_m": 4902.493264799789
+      },
+      {
+        "area_ratio_vs_current": 0.984828019099654,
+        "containment": 0.99,
+        "search_radius_m": 5394.90266006591
+      }
+    ],
+    "derived_search_radius_m": 5394.90266006591,
+    "max_speed_rule_radius_m": 3333.333333333333,
+    "profiles": {
+      "tank": {
+        "containment_radius_m": 4451.208752689618,
+        "presence_containment_radius_m": 4122.332134316015,
+        "sample_count": 800
+      },
+      "tel": {
+        "containment_radius_m": 5394.90266006591,
+        "presence_containment_radius_m": 4823.265026362802,
+        "sample_count": 800
+      }
+    }
+  },
+  "artifacts": {
+    "directory": "figures/chapter-0",
+    "files": [
+      "figures/chapter-0/chapter-0-sweep-width.csv",
+      "figures/chapter-0/figure-0-1-sweep-width.png",
+      "figures/chapter-0/chapter-0-step-sensitivity.csv",
+      "figures/chapter-0/figure-0-2-step-sensitivity.png",
+      "figures/chapter-0/chapter-0-halt-sensitivity.csv",
+      "figures/chapter-0/figure-0-3-halt-sensitivity.png",
+      "figures/chapter-0/chapter-0-aoi-design.csv",
+      "figures/chapter-0/figure-0-4-aoi-containment.png"
+    ],
+    "removed_stale": []
+  },
+  "chapter": "0",
+  "coverage_feasibility": {
+    "effective_coverage_ceiling": 0.1645456060905818,
+    "footprint_width_m": 800.0,
+    "mission_time_s_for_full_coverage": 793.7090839573682,
+    "note": "\uc774\ub3d9\uc2dc\uac04 0, \uc911\ubcf5 0\uc758 \ub099\uad00 \uc0c1\ud55c\uc774\ub2e4. \uc2e4\uce21 \uba74\uc801\ud0d0\uc0c9\ub960\uc774 \uc774 \uac12\uc758 \uc808\ubc18 \uadfc\ucc98\uba74 \uacc4\ud68d\uae30\ub294 \uc798 \ud558\uace0 \uc788\ub294 \uac83\uc774\uace0, \uc774 \uac12 \uc790\uccb4\uac00 \ub0ae\uc73c\uba74 \ubb38\uc81c\ub294 \uacc4\ud68d\uae30\uac00 \uc544\ub2c8\ub77c \uc790\uc6d0 \ubc30\uc815\uc774\ub2e4. random_search_detection_ceiling \uc740 \ub178\ub825\uc744 \ubb34\uc791\uc704\ub85c \ubfcc\ub838\uc744 \ub54c\uc758 \ud0d0\uc9c0\ud655\ub960\ub85c, \uacc4\ud68d\uae30\ub294 \uc774 \uac12\uc744 \ub118\uc5b4\uc57c \uc758\ubbf8\uac00 \uc788\ub2e4.",
+    "search_area_m2": 92844611.40781543,
+    "sweep_width_m": 348.27024607830845,
+    "team_centerline_distance_m": 43865.85712782501,
+    "uav_count_for_full_coverage": 15.874181679147364,
+    "uniform_prior_random_search_detection": 0.15172093062992464,
+    "unique_area_coverage_ceiling": 0.3779722395316741
+  },
+  "detection_contract": {
+    "detection_probability": 0.86,
+    "false_alarm_probability": 0.05,
+    "negative_report_log_odds_increment": -1.9148195619852821,
+    "positive_report_log_odds_increment": 2.8449093838194073,
+    "status": "A-grade modeling assumption; calibration flight test required"
+  },
+  "evaluation_protocol": {
+    "detection_model": "SR-Z50 EO/IR spatial model with terrain occlusion",
+    "development_and_confirmatory_seeds_disjoint": true,
+    "mission_time_s": 300.0,
+    "truth_and_planner_terrain": "independent draws when map_error is on",
+    "truth_motion_model": "IMM5"
+  },
+  "kpi_definitions": {
+    "centerline_vs_actual_woven_distance_m": "planned centerline distance versus the distance actually flown once the lateral weave is applied",
+    "conditional_mean_detection_time_s": "mean detection time using only detections inside the mission limit",
+    "coverage_redundancy_ratio": "fraction of per-LM covered cells that at least one other LM also covered",
+    "detection_probability_within_limit": "P(T_detection <= mission_time_s) over the Monte Carlo target ensemble",
+    "failure_rate_within_limit": "exactly 1 - detection_probability_within_limit",
+    "max_route_distance_m": "maximum flown distance over the LM team",
+    "mean_route_distance_m": "mean flown distance per LM, weave included",
+    "probability_mass_coverage": "initial target-location probability mass falling inside the unique searched support",
+    "restricted_mean_detection_time_s": "mean detection time with every failure capped at the mission limit",
+    "team_total_distance_m": "sum of flown distance over the LM team",
+    "unique_area_coverage_ratio": "union of sensor-on footprints inside the AOI, divided by AOI area; repeated coverage is counted once"
+  },
+  "mission": {
+    "mission_time_s": 300.0,
+    "search_area_m2": 92844611.40781543,
+    "search_radius_m": 5436.3,
+    "search_speed_mps": 27.77777777777778,
+    "target_max_speed_mps": 11.11111111111111,
+    "transit_speed_mps": 44.44444444444444,
+    "uav_count": 6
+  },
+  "monte_carlo": {
+    "base_seed": 20260830,
+    "inference": "paired seed effects with bootstrap confidence intervals",
+    "report_confidence": 0.95,
+    "sample_count": 1000
+  },
+  "motion_sensitivity": {
+    "halt_probability_boost": {
+      "declared_boost": 0.35,
+      "profiles": {
+        "tank": [
+          {
+            "end_radius_m": {
+              "max": 5129.811788333286,
+              "mean": 2402.311533980235,
+              "median": 2302.2863811139987,
+              "p05": 1043.283851911023,
+              "p50": 2302.2863811139987,
+              "p90": 3675.94058612026,
+              "p95": 4094.9749838017697,
+              "p99": 4454.280558687972
+            },
+            "end_radius_p99_delta_m": 3.0718059983537387,
+            "halt_probability_boost": 0.0,
+            "path_length_m": {
+              "max": 3076.6172375191836,
+              "mean": 1257.2208528853193,
+              "median": 1235.2364750071602,
+              "p05": 471.24681783359426,
+              "p50": 1235.2364750071602,
+              "p90": 1933.1029040337303,
+              "p95": 2134.7433791876597,
+              "p99": 2482.8738452462276
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 5129.811788333286,
+              "mean": 2409.2017063718667,
+              "median": 2301.8059984344573,
+              "p05": 1049.8013352806286,
+              "p50": 2301.8059984344573,
+              "p90": 3679.3318799218678,
+              "p95": 4105.164415051911,
+              "p99": 4451.208752689618
+            },
+            "end_radius_p99_delta_m": 0.0,
+            "halt_probability_boost": 0.15,
+            "path_length_m": {
+              "max": 3076.6172375191836,
+              "mean": 1243.0862182205817,
+              "median": 1230.244902579094,
+              "p05": 432.08433090265476,
+              "p50": 1230.244902579094,
+              "p90": 1892.9986338920132,
+              "p95": 2073.7111534556857,
+              "p99": 2471.605335404493
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 5129.811788333286,
+              "mean": 2396.2141853248404,
+              "median": 2266.0938695956183,
+              "p05": 1053.8414371094336,
+              "p50": 2266.0938695956183,
+              "p90": 3675.94058612026,
+              "p95": 4102.542627064582,
+              "p99": 4451.208752689618
+            },
+            "end_radius_p99_delta_m": 0.0,
+            "halt_probability_boost": 0.35,
+            "path_length_m": {
+              "max": 3076.6172375191836,
+              "mean": 1217.9677987945136,
+              "median": 1213.778152211937,
+              "p05": 385.2833957537057,
+              "p50": 1213.778152211937,
+              "p90": 1868.4178737728255,
+              "p95": 2041.7211870474214,
+              "p99": 2451.602785333857
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 5129.811788333286,
+              "mean": 2390.3152584390277,
+              "median": 2266.0938695956183,
+              "p05": 1053.8414371094336,
+              "p50": 2266.0938695956183,
+              "p90": 3665.4174939838767,
+              "p95": 4094.9749838017697,
+              "p99": 4451.208752689618
+            },
+            "end_radius_p99_delta_m": 0.0,
+            "halt_probability_boost": 0.5,
+            "path_length_m": {
+              "max": 3076.6172375191836,
+              "mean": 1190.90406617539,
+              "median": 1201.3219917714596,
+              "p05": 331.88683773996695,
+              "p50": 1201.3219917714596,
+              "p90": 1832.3094267678791,
+              "p95": 2036.9717501599719,
+              "p99": 2420.1347641031484
+            }
+          }
+        ],
+        "tel": [
+          {
+            "end_radius_m": {
+              "max": 6001.511047827956,
+              "mean": 2813.388460523795,
+              "median": 2875.1292879716175,
+              "p05": 955.8985809127291,
+              "p50": 2875.1292879716175,
+              "p90": 4550.706746519633,
+              "p95": 4965.010043681392,
+              "p99": 5443.797077460013
+            },
+            "end_radius_p99_delta_m": 48.894417394102675,
+            "halt_probability_boost": 0.0,
+            "path_length_m": {
+              "max": 3308.9604937025742,
+              "mean": 1988.545567103166,
+              "median": 2016.5405966899148,
+              "p05": 885.0865844923421,
+              "p50": 2016.5405966899148,
+              "p90": 2747.3475169307244,
+              "p95": 2990.635281849041,
+              "p99": 3215.4831504035924
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 6001.511047827956,
+              "mean": 2802.4371156237457,
+              "median": 2803.0034052912215,
+              "p05": 958.8203105220222,
+              "p50": 2803.0034052912215,
+              "p90": 4548.477277820046,
+              "p95": 4965.010043681392,
+              "p99": 5443.797077460013
+            },
+            "end_radius_p99_delta_m": 48.894417394102675,
+            "halt_probability_boost": 0.15,
+            "path_length_m": {
+              "max": 3308.9604937025742,
+              "mean": 1964.4361815918564,
+              "median": 2003.574585959756,
+              "p05": 810.8319510251616,
+              "p50": 2003.574585959756,
+              "p90": 2739.5270778360236,
+              "p95": 2983.1499787104867,
+              "p99": 3207.331208496385
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 6001.511047827956,
+              "mean": 2775.1701417991635,
+              "median": 2738.7920119928685,
+              "p05": 958.8203105220222,
+              "p50": 2738.7920119928685,
+              "p90": 4537.950935864583,
+              "p95": 4902.493264799789,
+              "p99": 5394.90266006591
+            },
+            "end_radius_p99_delta_m": 0.0,
+            "halt_probability_boost": 0.35,
+            "path_length_m": {
+              "max": 3308.9604937025742,
+              "mean": 1928.0711327333097,
+              "median": 1975.3147457701516,
+              "p05": 719.5952655945711,
+              "p50": 1975.3147457701516,
+              "p90": 2724.179434986957,
+              "p95": 2978.2718535536833,
+              "p99": 3207.331208496385
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 6001.511047827956,
+              "mean": 2769.0446029736436,
+              "median": 2720.8508983485826,
+              "p05": 959.1034352775134,
+              "p50": 2720.8508983485826,
+              "p90": 4535.659549282792,
+              "p95": 4902.493264799789,
+              "p99": 5394.90266006591
+            },
+            "end_radius_p99_delta_m": 0.0,
+            "halt_probability_boost": 0.5,
+            "path_length_m": {
+              "max": 3308.9604937025742,
+              "mean": 1917.3099499200587,
+              "median": 1969.7978302353758,
+              "p05": 709.8748962731167,
+              "p50": 1969.7978302353758,
+              "p90": 2719.1895175539294,
+              "p95": 2974.747310942365,
+              "p99": 3207.331208496385
+            }
+          }
+        ]
+      },
+      "question": "0.35 \ub77c\ub294 \uac12\uc5d0 \uadfc\uac70\uac00 \uc5c6\ub2e4. 0~0.5 \uc5d0\uc11c \uc885\ub8cc\ubc18\uacbd \ubd84\ud3ec\uac00 AOI \uacb0\uc815\uc744 \ub4a4\uc9d1\ub294\uc9c0 \ubcf8\ub2e4"
+    },
+    "horizon_s": 300.0,
+    "sample_count": 800,
+    "step_s": {
+      "profiles": {
+        "tank": [
+          {
+            "end_radius_m": {
+              "max": 5129.811788333286,
+              "mean": 2396.2141853248404,
+              "median": 2266.0938695956183,
+              "p05": 1053.8414371094336,
+              "p50": 2266.0938695956183,
+              "p90": 3675.94058612026,
+              "p95": 4102.542627064582,
+              "p99": 4451.208752689618
+            },
+            "net_displacement_m": {
+              "max": 2954.233098981311,
+              "mean": 951.6410551152912,
+              "median": 933.3954870027197,
+              "p05": 223.96226694932307,
+              "p50": 933.3954870027197,
+              "p90": 1614.0798806154166,
+              "p95": 1781.3750202510769,
+              "p99": 2158.041292603792
+            },
+            "path_length_m": {
+              "max": 3076.6172375191836,
+              "mean": 1217.9677987945136,
+              "median": 1213.778152211937,
+              "p05": 385.2833957537057,
+              "p50": 1213.778152211937,
+              "p90": 1868.4178737728255,
+              "p95": 2041.7211870474214,
+              "p99": 2451.602785333857
+            },
+            "step_s": 30.0
+          },
+          {
+            "end_radius_m": {
+              "max": 5051.10322120351,
+              "mean": 2388.9371704140563,
+              "median": 2259.4467785580587,
+              "p05": 1021.0750168635186,
+              "p50": 2259.4467785580587,
+              "p90": 3773.452681901113,
+              "p95": 4047.135171914978,
+              "p99": 4620.070360907095
+            },
+            "net_displacement_m": {
+              "max": 2800.231601208371,
+              "mean": 1071.7514374349232,
+              "median": 1051.8039784213504,
+              "p05": 325.83828850354615,
+              "p50": 1051.8039784213504,
+              "p90": 1714.2107056305508,
+              "p95": 1935.256943247567,
+              "p99": 2230.390109540119
+            },
+            "path_length_m": {
+              "max": 2884.8684677690335,
+              "mean": 1205.5051107833265,
+              "median": 1190.9097556842912,
+              "p05": 413.2281047955161,
+              "p50": 1190.9097556842912,
+              "p90": 1844.3140392656076,
+              "p95": 2058.273059044913,
+              "p99": 2392.6908509655973
+            },
+            "step_s": 10.0,
+            "vs_baseline": {
+              "end_radius_m": -55.407455149604175,
+              "net_displacement_m": 153.88192299649018,
+              "path_length_m": 16.551871997491844
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 5288.424319355072,
+              "mean": 2397.031902599487,
+              "median": 2203.442256003622,
+              "p05": 1022.8717396335653,
+              "p50": 2203.442256003622,
+              "p90": 3816.186038589832,
+              "p95": 4114.40136993388,
+              "p99": 4524.132052197028
+            },
+            "net_displacement_m": {
+              "max": 2609.2373688551647,
+              "mean": 1086.696283266849,
+              "median": 1087.9538270486719,
+              "p05": 263.4717081962981,
+              "p50": 1087.9538270486719,
+              "p90": 1761.7935977692246,
+              "p95": 1943.380865366071,
+              "p99": 2247.5015896769214
+            },
+            "path_length_m": {
+              "max": 3134.239448245738,
+              "mean": 1201.534932086403,
+              "median": 1189.657662847534,
+              "p05": 358.368973380364,
+              "p50": 1189.657662847534,
+              "p90": 1875.7260554584104,
+              "p95": 2043.3463174638196,
+              "p99": 2354.3297750780202
+            },
+            "step_s": 5.0,
+            "vs_baseline": {
+              "end_radius_m": 11.858742869298112,
+              "net_displacement_m": 162.00584511499414,
+              "path_length_m": 1.6251304163981786
+            }
+          }
+        ],
+        "tel": [
+          {
+            "end_radius_m": {
+              "max": 6001.511047827956,
+              "mean": 2775.1701417991635,
+              "median": 2738.7920119928685,
+              "p05": 958.8203105220222,
+              "p50": 2738.7920119928685,
+              "p90": 4537.950935864583,
+              "p95": 4902.493264799789,
+              "p99": 5394.90266006591
+            },
+            "net_displacement_m": {
+              "max": 3281.9801658034203,
+              "mean": 1751.931931893209,
+              "median": 1811.8811298663634,
+              "p05": 546.2435430478871,
+              "p50": 1811.8811298663634,
+              "p90": 2531.0218657426467,
+              "p95": 2787.3389582989344,
+              "p99": 3100.8020087637137
+            },
+            "path_length_m": {
+              "max": 3308.9604937025742,
+              "mean": 1928.0711327333097,
+              "median": 1975.3147457701516,
+              "p05": 719.5952655945711,
+              "p50": 1975.3147457701516,
+              "p90": 2724.179434986957,
+              "p95": 2978.2718535536833,
+              "p99": 3207.331208496385
+            },
+            "step_s": 30.0
+          },
+          {
+            "end_radius_m": {
+              "max": 5782.990233254844,
+              "mean": 2763.0154156468625,
+              "median": 2718.786991844587,
+              "p05": 961.6160094849514,
+              "p50": 2718.786991844587,
+              "p90": 4532.9655672595,
+              "p95": 4869.1822387814245,
+              "p99": 5311.223189956214
+            },
+            "net_displacement_m": {
+              "max": 3246.1454136348125,
+              "mean": 1712.8681363600654,
+              "median": 1769.795739343227,
+              "p05": 427.5596795253997,
+              "p50": 1769.795739343227,
+              "p90": 2581.8011524514486,
+              "p95": 2810.860812069478,
+              "p99": 3186.557663634048
+            },
+            "path_length_m": {
+              "max": 3306.708431186139,
+              "mean": 1890.3693373225701,
+              "median": 1915.7319850588515,
+              "p05": 610.8491327015596,
+              "p50": 1915.7319850588515,
+              "p90": 2715.370677951867,
+              "p95": 2897.368850652581,
+              "p99": 3225.3979924488467
+            },
+            "step_s": 10.0,
+            "vs_baseline": {
+              "end_radius_m": -33.31102601836483,
+              "net_displacement_m": 23.521853770543657,
+              "path_length_m": -80.90300290110235
+            }
+          },
+          {
+            "end_radius_m": {
+              "max": 5955.261425017519,
+              "mean": 2748.087895240847,
+              "median": 2665.576064407165,
+              "p05": 962.7378895631226,
+              "p50": 2665.576064407165,
+              "p90": 4517.238284706657,
+              "p95": 4898.952909315886,
+              "p99": 5343.997456119294
+            },
+            "net_displacement_m": {
+              "max": 3271.437112929647,
+              "mean": 1669.3856798861934,
+              "median": 1723.0537953558053,
+              "p05": 356.87958561778646,
+              "p50": 1723.0537953558053,
+              "p90": 2537.6566987047813,
+              "p95": 2840.150544664326,
+              "p99": 3093.6908191686543
+            },
+            "path_length_m": {
+              "max": 3281.2949714345846,
+              "mean": 1842.7775271466244,
+              "median": 1869.2100764321017,
+              "p05": 570.1440145430365,
+              "p50": 1869.2100764321017,
+              "p90": 2661.0939761716327,
+              "p95": 2905.9085408831834,
+              "p99": 3216.4370021378486
+            },
+            "step_s": 5.0,
+            "vs_baseline": {
+              "end_radius_m": -3.540355483903113,
+              "net_displacement_m": 52.81158636539158,
+              "path_length_m": -72.36331267049991
+            }
+          }
+        ]
+      },
+      "question": "step_s 30 s \uac00 \uada4\uc801\uc744 \uacfc\ub3c4\ud558\uac8c \ub9e4\ub044\ub7fd\uac8c \ub9cc\ub4dc\ub294\uac00. \uc21c\ubcc0\uc704\uac00 step \uc5d0 \ub454\uac10\ud558\uba74 AOI \uc0ac\uc774\uc9d5\uc5d0\ub294 \uc601\ud5a5\uc774 \uc5c6\ub2e4"
+    }
+  },
+  "probability_contract": {
+    "allocation_map": "normalized single-target location probability",
+    "evidence_map": "binary log-odds occupancy",
+    "fusion": "observation-ID deduplicated log-odds increments",
+    "reported": [
+      "POC",
+      "POD",
+      "POS"
+    ]
+  },
+  "provenance": {
+    "chapter": "0",
+    "code_fingerprint": "18a6b4ce277c8ae0",
+    "config_files": [
+      "chapter0_common_experiment.json"
+    ],
+    "package_version": "source",
+    "result_schema_version": 2,
+    "schema_version": 2
+  },
+  "search_envelope": {
+    "actual_woven_distance_example_m": 1139.8386643694232,
+    "calibration_status": "decomposition is an explicit initial assumption",
+    "geometric_equivalent_sweep_width_m": 400.0,
+    "important": "800 m support is not W = 1600 m; W = integral(PD(x), x)",
+    "instantaneous_swath_m": 190.06132838944353,
+    "planned_centerline_example_m": 1000.0,
+    "seeker_half_width_m": 300.0,
+    "system_support_half_width_m": 400.0,
+    "track_spacing_m": 320.0,
+    "vehicle_weave_half_amplitude_m": 100.0,
+    "vehicle_weave_wavelength_m": 800.0
+  },
+  "sweep_width_table": [
+    {
+      "centerline_detection_probability": 0.7972288948229334,
+      "channel_mode": "eo",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 318.8915579291733,
+      "target_profile": "Tank-nominal"
+    },
+    {
+      "centerline_detection_probability": 0.7616825490492607,
+      "channel_mode": "ir",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 304.6730196197043,
+      "target_profile": "Tank-nominal"
+    },
+    {
+      "centerline_detection_probability": 0.8739841300012635,
+      "channel_mode": "fused",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 349.5936520005054,
+      "target_profile": "Tank-nominal"
+    },
+    {
+      "centerline_detection_probability": 0.7910551336209535,
+      "channel_mode": "eo",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 316.4220534483814,
+      "target_profile": "TEL-nominal"
+    },
+    {
+      "centerline_detection_probability": 0.7559083131378087,
+      "channel_mode": "ir",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 302.36332525512347,
+      "target_profile": "TEL-nominal"
+    },
+    {
+      "centerline_detection_probability": 0.8673671003902786,
+      "channel_mode": "fused",
+      "geometric_sweep_width_m": 400.0,
+      "support_half_width_m": 400.0,
+      "sweep_width_m": 346.9468401561115,
+      "target_profile": "TEL-nominal"
+    }
+  ],
+  "target_profiles": [
+    {
+      "calibration_status": "uncalibrated research prior; track calibration pending",
+      "eo_contrast": 0.9,
+      "height_m": 2.5,
+      "imm5_mode_names": [],
+      "imm5_mode_probabilities": [
+        0.15,
+        0.15,
+        0.1,
+        0.35,
+        0.25
+      ],
+      "ir_contrast": 1.0,
+      "length_m": 9.0,
+      "motion_model": "imm5",
+      "name": "Tank-nominal",
+      "signature": "Tank nominal",
+      "width_m": 3.5
+    },
+    {
+      "calibration_status": "uncalibrated research prior; track calibration pending",
+      "eo_contrast": 0.85,
+      "height_m": 3.5,
+      "imm5_mode_names": [],
+      "imm5_mode_probabilities": [
+        0.05,
+        0.1,
+        0.65,
+        0.15,
+        0.05
+      ],
+      "ir_contrast": 0.85,
+      "length_m": 12.0,
+      "motion_model": "imm5",
+      "name": "TEL-nominal",
+      "signature": "TEL nominal",
+      "width_m": 3.0
+    }
+  ]
+}

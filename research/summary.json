@@ -1,0 +1,413 @@
+{
+  "0": {
+    "conditions": {},
+    "fused_sweep_width_m": 349.6,
+    "result_file": "chapter-0-result.json",
+    "runtime_s": 5.4,
+    "status": "ok",
+    "sweep_width_rows": 6
+  },
+  "1": {
+    "best_by_detection_probability": "koopman",
+    "best_by_restricted_time": "uniform",
+    "best_strategy": "koopman",
+    "conditions": {
+      "koopman": {
+        "conditional_mean_detection_time_s": 178.82163719231798,
+        "detection_probability_within_limit": 0.05006151420615442,
+        "failure_rate_within_limit": 0.9499384857938455,
+        "restricted_mean_detection_time_s": 294.1834385852313,
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "proportional": {
+        "conditional_mean_detection_time_s": 172.61856972569916,
+        "detection_probability_within_limit": 0.04629003003377116,
+        "failure_rate_within_limit": 0.9537099699662288,
+        "restricted_mean_detection_time_s": 294.26783563765645,
+        "unique_area_coverage_ratio": 0.0357946932636196
+      },
+      "sarops_core_accordion": {
+        "conditional_mean_detection_time_s": 192.26281272422008,
+        "detection_probability_within_limit": 0.034367191197969556,
+        "failure_rate_within_limit": 0.9656328088020304,
+        "restricted_mean_detection_time_s": 296.33693563262347,
+        "unique_area_coverage_ratio": 0.0435761483209282
+      },
+      "stone": {
+        "conditional_mean_detection_time_s": 178.82163719231798,
+        "detection_probability_within_limit": 0.05006151420615442,
+        "failure_rate_within_limit": 0.9499384857938455,
+        "restricted_mean_detection_time_s": 294.1834385852313,
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "uniform": {
+        "conditional_mean_detection_time_s": 169.43376899311568,
+        "detection_probability_within_limit": 0.04435419298612081,
+        "failure_rate_within_limit": 0.9556458070138791,
+        "restricted_mean_detection_time_s": 293.86338714267646,
+        "unique_area_coverage_ratio": 0.05427564902472755
+      }
+    },
+    "result_file": "chapter-1-result.json",
+    "runtime_s": 0.1,
+    "status": "ok"
+  },
+  "2": {
+    "best_by_detection_probability": "fab",
+    "best_by_restricted_time": "fab-route",
+    "best_method": "fab",
+    "conditions": {
+      "fab": {
+        "conditional_mean_detection_time_s": 165.2101972630183,
+        "detection_probability_per_covered_area": 4.570299774743753,
+        "detection_probability_within_limit": 0.199,
+        "escape_rate": 0.00015,
+        "failure_rate_within_limit": 0.8009999999999999,
+        "restricted_mean_detection_time_s": 273.17682925534064,
+        "unique_area_coverage_ratio": 0.04396522107379364
+      },
+      "fab-route": {
+        "conditional_mean_detection_time_s": 143.43862978598844,
+        "detection_probability_per_covered_area": 6.023579762402894,
+        "detection_probability_within_limit": 0.19825,
+        "escape_rate": 0.00015,
+        "failure_rate_within_limit": 0.80175,
+        "restricted_mean_detection_time_s": 268.96170835507223,
+        "unique_area_coverage_ratio": 0.033158725362956304
+      },
+      "myopic": {
+        "conditional_mean_detection_time_s": 165.86096493340833,
+        "detection_probability_per_covered_area": 4.2449490798756795,
+        "detection_probability_within_limit": 0.1894,
+        "escape_rate": 0.00015,
+        "failure_rate_within_limit": 0.8106,
+        "restricted_mean_detection_time_s": 274.59406675838756,
+        "unique_area_coverage_ratio": 0.04493790295595722
+      }
+    },
+    "result_file": "chapter-2-result.json",
+    "runtime_s": 23.4,
+    "status": "ok",
+    "temporal_gain": {
+      "flown": {
+        "fab_minus_myopic": 0.009599999999999997,
+        "route_constraint_loss": 0.0007500000000000007
+      },
+      "note": "a planning-model gain that does not appear in the flown KPI means the single-asset route extraction, not the allocation, is the binding constraint",
+      "planning_model": {
+        "fab_minus_myopic": 0.0032610894405689095,
+        "route_constraint_loss": 0.07815949053419871
+      }
+    }
+  },
+  "3": {
+    "conditions": {},
+    "result_file": "chapter-3-result.json",
+    "runtime_s": 953.0,
+    "status": "ok"
+  },
+  "4": {
+    "best_by_detection_probability": "Terrain-Prior",
+    "best_by_restricted_time": "Terrain-Prior",
+    "best_condition": "Terrain-Prior",
+    "conditions": {
+      "Adapted": {
+        "conditional_mean_detection_time_s": 101.9362435356592,
+        "detection_probability_per_covered_area": 2.1299555661808975,
+        "detection_probability_within_limit": 0.06185,
+        "escape_rate": 0.0001,
+        "failure_rate_within_limit": 0.9381499999999999,
+        "restricted_mean_detection_time_s": 287.72238179187013,
+        "unique_area_coverage_ratio": 0.029156139417853194
+      },
+      "Terrain-Full": {
+        "conditional_mean_detection_time_s": 103.0744752730355,
+        "detection_probability_per_covered_area": 6.553509046592692,
+        "detection_probability_within_limit": 0.18885000000000002,
+        "escape_rate": 0.0001,
+        "failure_rate_within_limit": 0.8111499999999999,
+        "restricted_mean_detection_time_s": 262.9313977339622,
+        "unique_area_coverage_ratio": 0.02897619326965293
+      },
+      "Terrain-Observability": {
+        "conditional_mean_detection_time_s": 101.67663012724023,
+        "detection_probability_per_covered_area": 2.015715645737337,
+        "detection_probability_within_limit": 0.058499999999999996,
+        "escape_rate": 0.0001,
+        "failure_rate_within_limit": 0.9414999999999999,
+        "restricted_mean_detection_time_s": 288.13705950643475,
+        "unique_area_coverage_ratio": 0.029058871229636834
+      },
+      "Terrain-Prior": {
+        "conditional_mean_detection_time_s": 104.97134533981541,
+        "detection_probability_per_covered_area": 6.943849979994882,
+        "detection_probability_within_limit": 0.1927,
+        "escape_rate": 0.0001,
+        "failure_rate_within_limit": 0.8073,
+        "restricted_mean_detection_time_s": 262.4805879449769,
+        "unique_area_coverage_ratio": 0.027843018876932364
+      },
+      "Terrain-Transition": {
+        "conditional_mean_detection_time_s": 98.83764212389517,
+        "detection_probability_per_covered_area": 4.532064779446961,
+        "detection_probability_within_limit": 0.12795,
+        "escape_rate": 0.0001,
+        "failure_rate_within_limit": 0.87205,
+        "restricted_mean_detection_time_s": 274.7239469284175,
+        "unique_area_coverage_ratio": 0.028937285994366384
+      }
+    },
+    "result_file": "chapter-4-result.json",
+    "runtime_s": 66.7,
+    "status": "ok",
+    "terrain_component_effect_vs_adapted": {
+      "Terrain-Full": {
+        "delta_belief_rmse_m": -340.87491078559333,
+        "delta_credible_area_ratio": -0.1775319989593597,
+        "delta_detection_probability": 0.127,
+        "delta_restricted_detection_time_s": -24.790984057907906,
+        "paired_delta_across_seeds": {
+          "confidence_interval_95": [
+            0.10035097924184791,
+            0.1536490207581521
+          ],
+          "max": 0.237,
+          "mean": 0.127,
+          "min": 0.0,
+          "seed_count": 20,
+          "standard_deviation": 0.06080512443778679
+        }
+      },
+      "Terrain-Observability": {
+        "delta_belief_rmse_m": -1.949388392030869,
+        "delta_credible_area_ratio": 0.0018046454786211918,
+        "delta_detection_probability": -0.00335,
+        "delta_restricted_detection_time_s": 0.4146777145646183,
+        "paired_delta_across_seeds": {
+          "confidence_interval_95": [
+            -0.015887450181461604,
+            0.009187450181461602
+          ],
+          "max": 0.066,
+          "mean": -0.00335,
+          "min": -0.097,
+          "seed_count": 20,
+          "standard_deviation": 0.028606725377821652
+        }
+      },
+      "Terrain-Prior": {
+        "delta_belief_rmse_m": -411.2811292232086,
+        "delta_credible_area_ratio": -0.12000892432830923,
+        "delta_detection_probability": 0.13085,
+        "delta_restricted_detection_time_s": -25.241793846893245,
+        "paired_delta_across_seeds": {
+          "confidence_interval_95": [
+            0.10325999291886931,
+            0.15844000708113068
+          ],
+          "max": 0.24,
+          "mean": 0.13085,
+          "min": 0.031,
+          "seed_count": 20,
+          "standard_deviation": 0.06295217482970285
+        }
+      },
+      "Terrain-Transition": {
+        "delta_belief_rmse_m": 118.20335696942129,
+        "delta_credible_area_ratio": -0.028423166288283785,
+        "delta_detection_probability": 0.0661,
+        "delta_restricted_detection_time_s": -12.998434863452644,
+        "paired_delta_across_seeds": {
+          "confidence_interval_95": [
+            0.03902461721707143,
+            0.09317538278292858
+          ],
+          "max": 0.14,
+          "mean": 0.0661,
+          "min": -0.059,
+          "seed_count": 20,
+          "standard_deviation": 0.06177795553005687
+        }
+      }
+    }
+  },
+  "5a": {
+    "best_by_detection_probability": "shared-reserved",
+    "best_by_restricted_time": "shared-reserved",
+    "best_condition": "shared-reserved",
+    "conditions": {
+      "independent": {
+        "conditional_mean_detection_time_s": 142.56414366035975,
+        "detection_probability_per_covered_area": 7.095256155803931,
+        "detection_probability_within_limit": 0.276975,
+        "escape_rate": 0.000325,
+        "failure_rate_within_limit": 0.723025,
+        "restricted_mean_detection_time_s": 256.3942036903282,
+        "unique_area_coverage_ratio": 0.039448329583496526
+      },
+      "shared": {
+        "conditional_mean_detection_time_s": 136.80632051474208,
+        "detection_probability_per_covered_area": 5.040351233239342,
+        "detection_probability_within_limit": 0.60375,
+        "escape_rate": 0.000325,
+        "failure_rate_within_limit": 0.39625,
+        "restricted_mean_detection_time_s": 201.47181601077554,
+        "unique_area_coverage_ratio": 0.12115360768523693
+      },
+      "shared-past": {
+        "conditional_mean_detection_time_s": 146.95883251662735,
+        "detection_probability_per_covered_area": 6.8583335444957925,
+        "detection_probability_within_limit": 0.288875,
+        "escape_rate": 0.000325,
+        "failure_rate_within_limit": 0.711125,
+        "restricted_mean_detection_time_s": 255.7902327432407,
+        "unique_area_coverage_ratio": 0.04243081540468059
+      },
+      "shared-reserved": {
+        "conditional_mean_detection_time_s": 135.24524498255803,
+        "detection_probability_per_covered_area": 4.862772946229855,
+        "detection_probability_within_limit": 0.614075,
+        "escape_rate": 0.000325,
+        "failure_rate_within_limit": 0.38592499999999996,
+        "restricted_mean_detection_time_s": 198.8282238126643,
+        "unique_area_coverage_ratio": 0.12781161516864661
+      }
+    },
+    "cooperation_gain": {
+      "_factor_note": "independent -> shared-past 는 과거 관측을 공유하는 효과, shared-past -> shared 는 같은 슬라이스에 동료의 **예정된** 탐색을 고려하는 효과다. 후자는 실제 표적 정보를 더 얻는 것이 아니라 계획을 조율하는 것이므로, 둘을 합쳐 '정보공유 이득' 이라 부르면 안 된다.",
+      "belief_sharing_gain_deprecated": 0.326775,
+      "effort_normalised": {
+        "note": "detection probability per unit swept area; use this when fairness_check.equal_swept_effort is false",
+        "past_observation_sharing_gain": -0.2369226113081382,
+        "route_reservation_gain": -0.17757828700948686,
+        "total_cooperation_gain": -2.2324832095740756,
+        "within_slice_coordination_gain": -1.8179823112564506
+      },
+      "past_observation_sharing_gain": 0.011899999999999966,
+      "redundancy_reduction": 0.327600210231469,
+      "route_reservation_gain": 0.010325000000000029,
+      "total_cooperation_gain": 0.3371,
+      "within_slice_coordination_gain": 0.314875
+    },
+    "result_file": "chapter-5a-result.json",
+    "runtime_s": 222.3,
+    "status": "ok"
+  },
+  "5b1": {
+    "asoc_sweep_points": 0,
+    "conditions": {},
+    "mappo_converged": false,
+    "result_file": "chapter-5b1-result.json",
+    "runtime_s": 3708.3,
+    "status": "ok"
+  },
+  "5b2": {
+    "best_by_detection_probability": "central-gcs",
+    "best_by_restricted_time": "central-gcs",
+    "conditions": {
+      "central-gcs": {
+        "conditional_mean_detection_time_s": 124.17613427172016,
+        "detection_probability_per_covered_area": 4.154643476347314,
+        "detection_probability_within_limit": 0.62655,
+        "escape_rate": 0.0002,
+        "failure_rate_within_limit": 0.37344999999999995,
+        "restricted_mean_detection_time_s": 189.83755692794625,
+        "unique_area_coverage_ratio": 0.1521031293233292
+      },
+      "mappo": {
+        "conditional_mean_detection_time_s": 128.2051757327437,
+        "detection_probability_per_covered_area": 2.046571268038249,
+        "detection_probability_within_limit": 0.31615,
+        "escape_rate": 0.00015,
+        "failure_rate_within_limit": 0.6838500000000001,
+        "restricted_mean_detection_time_s": 245.6870663079069,
+        "unique_area_coverage_ratio": 0.1603660619123088
+      }
+    },
+    "result_file": "chapter-5b2-result.json",
+    "runtime_s": 108.1,
+    "selected_cooperation_structure": "central-gcs",
+    "status": "ok"
+  },
+  "6": {
+    "best_by_detection_probability": "ablation-effort-greedy",
+    "best_by_restricted_time": "proposed-terrain-gcs-team-h1",
+    "conditions": {
+      "ablation-effort-greedy": {
+        "conditional_mean_detection_time_s": 152.1824880341372,
+        "detection_probability_per_covered_area": 4.768168925341757,
+        "detection_probability_within_limit": 0.6457,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.35429999999999995,
+        "restricted_mean_detection_time_s": 204.55423252364238,
+        "unique_area_coverage_ratio": 0.13628605762568213
+      },
+      "ablation-independent": {
+        "conditional_mean_detection_time_s": 141.42162564938957,
+        "detection_probability_per_covered_area": 8.787976307454358,
+        "detection_probability_within_limit": 0.285325,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.714675,
+        "restricted_mean_detection_time_s": 254.75362533841206,
+        "unique_area_coverage_ratio": 0.032642697694411305
+      },
+      "ablation-terrain-off": {
+        "conditional_mean_detection_time_s": 157.25488447450607,
+        "detection_probability_per_covered_area": 2.513284552775177,
+        "detection_probability_within_limit": 0.41525,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.58475,
+        "restricted_mean_detection_time_s": 240.72509077803866,
+        "unique_area_coverage_ratio": 0.1650480432165015
+      },
+      "baseline-sarops-adapted": {
+        "conditional_mean_detection_time_s": 142.49983378136193,
+        "detection_probability_per_covered_area": 2.4640089445343207,
+        "detection_probability_within_limit": 0.281875,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.718125,
+        "restricted_mean_detection_time_s": 255.6046406471214,
+        "unique_area_coverage_ratio": 0.11454289083950746
+      },
+      "baseline-sarops-core": {
+        "conditional_mean_detection_time_s": 143.47406611642228,
+        "detection_probability_per_covered_area": 2.4114908905843584,
+        "detection_probability_within_limit": 0.27555,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.72445,
+        "restricted_mean_detection_time_s": 256.86927891838013,
+        "unique_area_coverage_ratio": 0.11426541193909631
+      },
+      "proposed-terrain-gcs-team-h1": {
+        "conditional_mean_detection_time_s": 138.32750803738418,
+        "detection_probability_per_covered_area": 5.732481217726688,
+        "detection_probability_within_limit": 0.6264,
+        "escape_rate": 0.0,
+        "failure_rate_within_limit": 0.37360000000000004,
+        "restricted_mean_detection_time_s": 198.72835103461745,
+        "unique_area_coverage_ratio": 0.11039268483983275
+      }
+    },
+    "generalisation_verdict": {
+      "claim_status": "confirmatory",
+      "no_significant_difference_from": [
+        "ablation-effort-greedy"
+      ],
+      "not_significantly_better_than": [
+        "ablation-effort-greedy"
+      ],
+      "proposed_detection_probability_within_limit": 0.600375,
+      "reliability_status": "reliable",
+      "significantly_better_than": [
+        "ablation-independent",
+        "ablation-terrain-off",
+        "baseline-sarops-adapted",
+        "baseline-sarops-core"
+      ],
+      "significantly_worse_than": []
+    },
+    "result_file": "chapter-6-result.json",
+    "runtime_s": 275.6,
+    "status": "ok"
+  }
+}

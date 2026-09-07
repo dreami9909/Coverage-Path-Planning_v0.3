@@ -1,0 +1,4 @@
+condition,seed_count,samples_per_seed_min,reliability_status,detection_mean,detection_ci_low,detection_ci_high,restricted_time_mean_s,restricted_time_ci_low_s,restricted_time_ci_high_s,coverage_mean,coverage_ci_low,coverage_ci_high
+independent,2,100,insufficient-design,0.0,0.0,0.0,120.0,120.0,120.0,0.012061255338828342,0.011672182585962912,0.012450328091693772
+shared,2,100,insufficient-design,0.0,0.0,0.0,120.0,120.0,120.0,0.012061255338828342,0.011672182585962912,0.012450328091693772
+shared-reserved,2,100,insufficient-design,0.0,0.0,0.0,120.0,120.0,120.0,0.020912660466516884,0.020815392278300527,0.02100992865473324

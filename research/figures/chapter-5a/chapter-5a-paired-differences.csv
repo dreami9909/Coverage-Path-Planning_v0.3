@@ -1,0 +1,3 @@
+condition,baseline,metric,mean_difference,mean_difference_is,ci_low,ci_high,winner
+independent,shared_reserved,detection_probability_within_limit,0.33710000000000007,shared-reserved minus condition,0.31987437500000004,0.3535375,shared-reserved
+shared,shared_reserved,detection_probability_within_limit,0.010325,shared-reserved minus condition,0.0024125000000000036,0.0189878125,shared-reserved

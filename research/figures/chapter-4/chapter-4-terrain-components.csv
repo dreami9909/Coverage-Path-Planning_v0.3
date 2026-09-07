@@ -1,0 +1,5 @@
+component,baseline,delta_detection_probability,ci_low,ci_high,seed_count,mean_difference_is,verdict
+Terrain-Full,Adapted,0.127,0.10035097924184791,0.1536490207581521,20,component minus Adapted,component helps
+Terrain-Observability,Adapted,-0.00335,-0.015887450181461604,0.009187450181461602,20,component minus Adapted,inconclusive
+Terrain-Prior,Adapted,0.13085,0.10325999291886931,0.15844000708113068,20,component minus Adapted,component helps
+Terrain-Transition,Adapted,0.0661,0.03902461721707143,0.09317538278292858,20,component minus Adapted,component helps

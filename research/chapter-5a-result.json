@@ -1,0 +1,2988 @@
+{
+  "artifacts": {
+    "error": "ValueError: paired comparisons mix difference orientations and cannot share one axis: ['shared-reserved minus independent', 'shared-reserved minus shared']",
+    "files": []
+  },
+  "best_condition": "shared-reserved",
+  "chapter": "5-a",
+  "condition": {
+    "base_seed": 20260830,
+    "common_random_numbers": "within each seed every cooperation condition shares terrain, target trajectories, and sensor-detection uniforms",
+    "evaluation_seeds": [
+      1115516382,
+      1622468503,
+      2129420624,
+      488889097,
+      995841218,
+      1502793339,
+      2009745460,
+      369213933,
+      876166054,
+      1383118175,
+      1890070296,
+      249538769,
+      756490890,
+      1263443011,
+      1770395132,
+      129863605,
+      636815726,
+      1143767847,
+      1650719968,
+      10188441,
+      517140562,
+      1024092683,
+      1531044804,
+      2037996925,
+      397465398,
+      904417519,
+      1411369640,
+      1918321761,
+      277790234,
+      784742355,
+      1291694476,
+      1798646597,
+      158115070,
+      665067191,
+      1172019312,
+      1678971433,
+      38439906,
+      545392027,
+      1052344148,
+      1559296269,
+      2066248390,
+      425716863,
+      932668984,
+      1439621105,
+      1946573226,
+      306041699,
+      812993820,
+      1319945941,
+      1826898062,
+      186366535,
+      693318656,
+      1200270777,
+      1707222898,
+      66691371,
+      573643492,
+      1080595613,
+      1587547734,
+      2094499855,
+      453968328,
+      960920449,
+      1467872570,
+      1974824691,
+      334293164,
+      841245285,
+      1348197406,
+      1855149527,
+      214618000,
+      721570121,
+      1228522242,
+      1735474363,
+      94942836,
+      601894957,
+      1108847078,
+      1615799199,
+      2122751320,
+      482219793,
+      989171914,
+      1496124035,
+      2003076156,
+      362544629
+    ],
+    "fairness": "same team effort, sensor, target ensemble, seed, and mission time",
+    "mission_time_s": 300.0,
+    "monte_carlo_sample_count": 1000,
+    "seed_count": 80,
+    "target_count": 1,
+    "target_profile": "Tank-nominal",
+    "temporal_method": "fab",
+    "time_slice_count": 5,
+    "truth_motion": {
+      "behaviour_profile": "MANEUVER_HEAVY",
+      "boundary_mode": "open",
+      "ensemble_mean_speed_kph": 15.45,
+      "mode_names": [
+        "HALT",
+        "LOW_CV",
+        "HIGH_CV",
+        "CTRV",
+        "MANEUVER"
+      ],
+      "mode_probabilities": [
+        0.15,
+        0.15,
+        0.1,
+        0.35,
+        0.25
+      ],
+      "mode_speed_bounds_kph": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          20.0
+        ],
+        [
+          20.0,
+          40.0
+        ],
+        [
+          2.0,
+          32.0
+        ],
+        [
+          0.0,
+          40.0
+        ]
+      ],
+      "motion_model": "IMM5",
+      "persistence_alpha": 0.45,
+      "step_s": 30.0,
+      "terrain_coupling": {
+        "bias_strength": 0.6,
+        "halt_probability_boost": 0.35,
+        "offroad_probability": 0.2
+      }
+    },
+    "uav_count": 6
+  },
+  "conditions": {
+    "independent": {
+      "kpi": {
+        "conditional_mean_detection_time_s": {
+          "ci_half_width": 3.6105100136601465,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            138.96781134155734,
+            146.18883136887763
+          ],
+          "max": 175.14145979222272,
+          "mean": 142.56414366035975,
+          "min": 106.60672783772337,
+          "valid_seed_count": 80
+        },
+        "detection_probability_per_covered_area": {
+          "ci_half_width": 0.3273590119378471,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            6.77421876364418,
+            7.428936787519874
+          ],
+          "max": 11.346551805102537,
+          "mean": 7.095256155803931,
+          "min": 4.664880694423833,
+          "valid_seed_count": 80
+        },
+        "detection_probability_within_limit": {
+          "ci_half_width": 0.012388281249999966,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.264724375,
+            0.28950093749999994
+          ],
+          "max": 0.45,
+          "mean": 0.276975,
+          "min": 0.168,
+          "trajectory_level_wilson_interval": [
+            0.2738847770362057,
+            0.2800866404692007
+          ],
+          "valid_seed_count": 80
+        },
+        "escape_rate": {
+          "ci_half_width": 0.00011875,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.0002125,
+            0.00045
+          ],
+          "max": 0.002,
+          "mean": 0.000325,
+          "min": 0.0,
+          "valid_seed_count": 80
+        },
+        "failure_rate_within_limit": {
+          "ci_half_width": 0.012388281249999966,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.7104990625000001,
+            0.735275625
+          ],
+          "max": 0.832,
+          "mean": 0.723025,
+          "min": 0.55,
+          "valid_seed_count": 80
+        },
+        "in_area_miss_rate": {
+          "ci_half_width": 0.01239406249999997,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.7103625,
+            0.735150625
+          ],
+          "max": 0.832,
+          "mean": 0.7227,
+          "min": 0.55,
+          "valid_seed_count": 80
+        },
+        "reliability": {
+          "checks": {
+            "coverage_ci_half_width": {
+              "observed": 0.0012420539709052554,
+              "passed": true,
+              "required_maximum": 0.02
+            },
+            "detection_ci_half_width": {
+              "observed": 0.012388281249999966,
+              "passed": true,
+              "required_maximum": 0.03
+            },
+            "minimum_samples_per_seed": {
+              "observed": 1000,
+              "passed": true,
+              "required": 1000
+            },
+            "minimum_seed_count": {
+              "observed": 80,
+              "passed": true,
+              "required": 20
+            },
+            "restricted_time_ci_half_width_s": {
+              "observed": 1.9291847037623455,
+              "passed": true,
+              "required_maximum": 10.0
+            }
+          },
+          "criteria": {
+            "bootstrap_resamples": 5000,
+            "confidence": 0.95,
+            "maximum_coverage_ci_half_width": 0.02,
+            "maximum_detection_change": 0.01,
+            "maximum_detection_ci_half_width": 0.03,
+            "maximum_restricted_time_change_s": 5.0,
+            "maximum_restricted_time_ci_half_width_s": 10.0,
+            "minimum_samples_per_seed": 1000,
+            "minimum_seed_count": 20
+          },
+          "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+          "status": "reliable",
+          "trajectory_level_required_sample_count": 1068
+        },
+        "restricted_mean_detection_time_s": {
+          "ci_half_width": 1.9291847037623455,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            254.42904592897517,
+            258.28741533649986
+          ],
+          "max": 272.83204176879445,
+          "mean": 256.3942036903282,
+          "min": 229.5610947621441,
+          "valid_seed_count": 80
+        },
+        "samples_per_seed": {
+          "max": 1000,
+          "min": 1000
+        },
+        "seed_count": 80,
+        "team": {
+          "coverage_redundancy_ratio": {
+            "ci_half_width": 0.0,
+            "confidence_interval": [
+              0.8333333333333333,
+              0.8333333333333333
+            ],
+            "max": 0.8333333333333334,
+            "mean": 0.8333333333333333,
+            "min": 0.8333333333333334
+          },
+          "max_route_distance_m": {
+            "ci_half_width": 39.42303325151079,
+            "confidence_interval": [
+              10781.602119278909,
+              10860.44818578193
+            ],
+            "max": 11226.93195214398,
+            "mean": 10820.821209951859,
+            "min": 10375.546417099864
+          },
+          "mean_route_distance_m": {
+            "ci_half_width": 39.988496808280615,
+            "confidence_interval": [
+              10781.852334646903,
+              10861.829328263464
+            ],
+            "max": 11226.93195214398,
+            "mean": 10820.821209951859,
+            "min": 10375.546417099864
+          },
+          "team_total_distance_m": {
+            "ci_half_width": 242.43768035779794,
+            "confidence_interval": [
+              64682.194224948886,
+              65167.06958566448
+            ],
+            "max": 67361.59171286388,
+            "mean": 64924.927259711156,
+            "min": 62253.27850259918
+          },
+          "uav_count": 6
+        },
+        "total_detected_count": 22158.0,
+        "total_sample_count": 80000,
+        "unique_area_coverage_ratio": {
+          "ci_half_width": 0.0012420539709052554,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.038226367572719716,
+            0.04071047551453023
+          ],
+          "max": 0.05164940794288589,
+          "mean": 0.039448329583496526,
+          "min": 0.02801323820631099,
+          "valid_seed_count": 80
+        }
+      }
+    },
+    "shared": {
+      "kpi": {
+        "conditional_mean_detection_time_s": {
+          "ci_half_width": 3.519320387451117,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            133.27973655873487,
+            140.3183773336371
+          ],
+          "max": 172.0799040472919,
+          "mean": 136.80632051474208,
+          "min": 106.1164032200272,
+          "valid_seed_count": 80
+        },
+        "detection_probability_per_covered_area": {
+          "ci_half_width": 0.17958864913249872,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            4.8615256035092385,
+            5.220702901774236
+          ],
+          "max": 7.6675922679142685,
+          "mean": 5.040351233239342,
+          "min": 3.556938993504043,
+          "valid_seed_count": 80
+        },
+        "detection_probability_within_limit": {
+          "ci_half_width": 0.01998296874999994,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.5838237500000001,
+            0.6237896875
+          ],
+          "max": 0.787,
+          "mean": 0.60375,
+          "min": 0.392,
+          "trajectory_level_wilson_interval": [
+            0.6003557469279447,
+            0.6071342897666595
+          ],
+          "valid_seed_count": 80
+        },
+        "escape_rate": {
+          "ci_half_width": 0.00011875,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.0002125,
+            0.00045
+          ],
+          "max": 0.002,
+          "mean": 0.000325,
+          "min": 0.0,
+          "valid_seed_count": 80
+        },
+        "failure_rate_within_limit": {
+          "ci_half_width": 0.01998296874999994,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.37621031250000003,
+            0.4161762499999999
+          ],
+          "max": 0.608,
+          "mean": 0.39625,
+          "min": 0.21299999999999997,
+          "valid_seed_count": 80
+        },
+        "in_area_miss_rate": {
+          "ci_half_width": 0.020244999999999985,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.3757621875,
+            0.4162521875
+          ],
+          "max": 0.608,
+          "mean": 0.395925,
+          "min": 0.213,
+          "valid_seed_count": 80
+        },
+        "reliability": {
+          "checks": {
+            "coverage_ci_half_width": {
+              "observed": 0.003748062453218834,
+              "passed": true,
+              "required_maximum": 0.02
+            },
+            "detection_ci_half_width": {
+              "observed": 0.01998296874999994,
+              "passed": true,
+              "required_maximum": 0.03
+            },
+            "minimum_samples_per_seed": {
+              "observed": 1000,
+              "passed": true,
+              "required": 1000
+            },
+            "minimum_seed_count": {
+              "observed": 80,
+              "passed": true,
+              "required": 20
+            },
+            "restricted_time_ci_half_width_s": {
+              "observed": 3.7697976436413683,
+              "passed": true,
+              "required_maximum": 10.0
+            }
+          },
+          "criteria": {
+            "bootstrap_resamples": 5000,
+            "confidence": 0.95,
+            "maximum_coverage_ci_half_width": 0.02,
+            "maximum_detection_change": 0.01,
+            "maximum_detection_ci_half_width": 0.03,
+            "maximum_restricted_time_change_s": 5.0,
+            "maximum_restricted_time_ci_half_width_s": 10.0,
+            "minimum_samples_per_seed": 1000,
+            "minimum_seed_count": 20
+          },
+          "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+          "status": "reliable",
+          "trajectory_level_required_sample_count": 1068
+        },
+        "restricted_mean_detection_time_s": {
+          "ci_half_width": 3.7697976436413683,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            197.6903124300021,
+            205.22990771728485
+          ],
+          "max": 234.81866596381172,
+          "mean": 201.47181601077554,
+          "min": 159.6896372066018,
+          "valid_seed_count": 80
+        },
+        "samples_per_seed": {
+          "max": 1000,
+          "min": 1000
+        },
+        "seed_count": 80,
+        "team": {
+          "coverage_redundancy_ratio": {
+            "ci_half_width": 0.014700045644540916,
+            "confidence_interval": [
+              0.5134221381903239,
+              0.5428222294794057
+            ],
+            "max": 0.6425339366515836,
+            "mean": 0.5283988380549587,
+            "min": 0.32665881429132315
+          },
+          "max_route_distance_m": {
+            "ci_half_width": 20.39893414251037,
+            "confidence_interval": [
+              11135.218500493049,
+              11176.01636877807
+            ],
+            "max": 11360.2639214951,
+            "mean": 11155.876481213108,
+            "min": 10910.812602159542
+          },
+          "mean_route_distance_m": {
+            "ci_half_width": 18.414465040122195,
+            "confidence_interval": [
+              10899.630960273968,
+              10936.459890354212
+            ],
+            "max": 11071.186523100989,
+            "mean": 10918.012482967644,
+            "min": 10708.6012341327
+          },
+          "team_total_distance_m": {
+            "ci_half_width": 109.1344694408981,
+            "confidence_interval": [
+              65397.91734224785,
+              65616.18628112965
+            ],
+            "max": 66427.11913860592,
+            "mean": 65508.074897805855,
+            "min": 64251.6074047962
+          },
+          "uav_count": 6
+        },
+        "total_detected_count": 48300.0,
+        "total_sample_count": 80000,
+        "unique_area_coverage_ratio": {
+          "ci_half_width": 0.003748062453218834,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.1174147097191266,
+            0.12491083462556427
+          ],
+          "max": 0.17148381582543845,
+          "mean": 0.12115360768523693,
+          "min": 0.08452605556001476,
+          "valid_seed_count": 80
+        }
+      }
+    },
+    "shared-past": {
+      "kpi": {
+        "conditional_mean_detection_time_s": {
+          "ci_half_width": 3.443251517774428,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            143.4069738464962,
+            150.29347688204504
+          ],
+          "max": 176.6846860956837,
+          "mean": 146.95883251662735,
+          "min": 110.62021983038822,
+          "valid_seed_count": 80
+        },
+        "detection_probability_per_covered_area": {
+          "ci_half_width": 0.3123614577849936,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            6.553313409168298,
+            7.178036324738285
+          ],
+          "max": 11.269397181693428,
+          "mean": 6.8583335444957925,
+          "min": 4.505553357048047,
+          "valid_seed_count": 80
+        },
+        "detection_probability_within_limit": {
+          "ci_half_width": 0.012200156249999983,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.2769625,
+            0.30136281249999997
+          ],
+          "max": 0.45,
+          "mean": 0.288875,
+          "min": 0.185,
+          "trajectory_level_wilson_interval": [
+            0.2857444631715587,
+            0.2920258115547227
+          ],
+          "valid_seed_count": 80
+        },
+        "escape_rate": {
+          "ci_half_width": 0.00011875,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.0002125,
+            0.00045
+          ],
+          "max": 0.002,
+          "mean": 0.000325,
+          "min": 0.0,
+          "valid_seed_count": 80
+        },
+        "failure_rate_within_limit": {
+          "ci_half_width": 0.012200156249999983,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.6986371875,
+            0.7230375
+          ],
+          "max": 0.815,
+          "mean": 0.711125,
+          "min": 0.55,
+          "valid_seed_count": 80
+        },
+        "in_area_miss_rate": {
+          "ci_half_width": 0.01222515624999998,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.6985371875,
+            0.7229875
+          ],
+          "max": 0.815,
+          "mean": 0.7108,
+          "min": 0.55,
+          "valid_seed_count": 80
+        },
+        "reliability": {
+          "checks": {
+            "coverage_ci_half_width": {
+              "observed": 0.0010128354061116375,
+              "passed": true,
+              "required_maximum": 0.02
+            },
+            "detection_ci_half_width": {
+              "observed": 0.012200156249999983,
+              "passed": true,
+              "required_maximum": 0.03
+            },
+            "minimum_samples_per_seed": {
+              "observed": 1000,
+              "passed": true,
+              "required": 1000
+            },
+            "minimum_seed_count": {
+              "observed": 80,
+              "passed": true,
+              "required": 20
+            },
+            "restricted_time_ci_half_width_s": {
+              "observed": 1.94214824032818,
+              "passed": true,
+              "required_maximum": 10.0
+            }
+          },
+          "criteria": {
+            "bootstrap_resamples": 5000,
+            "confidence": 0.95,
+            "maximum_coverage_ci_half_width": 0.02,
+            "maximum_detection_change": 0.01,
+            "maximum_detection_ci_half_width": 0.03,
+            "maximum_restricted_time_change_s": 5.0,
+            "maximum_restricted_time_ci_half_width_s": 10.0,
+            "minimum_samples_per_seed": 1000,
+            "minimum_seed_count": 20
+          },
+          "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+          "status": "reliable",
+          "trajectory_level_required_sample_count": 1068
+        },
+        "restricted_mean_detection_time_s": {
+          "ci_half_width": 1.94214824032818,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            253.80202193127747,
+            257.6863184119338
+          ],
+          "max": 272.31950390650945,
+          "mean": 255.7902327432407,
+          "min": 229.5610947621441,
+          "valid_seed_count": 80
+        },
+        "samples_per_seed": {
+          "max": 1000,
+          "min": 1000
+        },
+        "seed_count": 80,
+        "team": {
+          "coverage_redundancy_ratio": {
+            "ci_half_width": 0.0,
+            "confidence_interval": [
+              0.8333333333333333,
+              0.8333333333333333
+            ],
+            "max": 0.8333333333333334,
+            "mean": 0.8333333333333333,
+            "min": 0.8333333333333334
+          },
+          "max_route_distance_m": {
+            "ci_half_width": 42.491246461471746,
+            "confidence_interval": [
+              10827.513301239298,
+              10912.495794162242
+            ],
+            "max": 11249.799657635323,
+            "mean": 10870.619751292634,
+            "min": 10441.261426358778
+          },
+          "mean_route_distance_m": {
+            "ci_half_width": 43.439204646222606,
+            "confidence_interval": [
+              10826.807283177799,
+              10913.685692470244
+            ],
+            "max": 11249.799657635323,
+            "mean": 10870.619751292634,
+            "min": 10441.261426358778
+          },
+          "team_total_distance_m": {
+            "ci_half_width": 259.0108211951883,
+            "confidence_interval": [
+              64965.18152729978,
+              65483.203169690154
+            ],
+            "max": 67498.79794581194,
+            "mean": 65223.7185077558,
+            "min": 62647.56855815267
+          },
+          "uav_count": 6
+        },
+        "total_detected_count": 23110.0,
+        "total_sample_count": 80000,
+        "unique_area_coverage_ratio": {
+          "ci_half_width": 0.0010128354061116375,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.04142041170327437,
+            0.04344608251549764
+          ],
+          "max": 0.053108430766131254,
+          "mean": 0.04243081540468059,
+          "min": 0.03034767472350357,
+          "valid_seed_count": 80
+        }
+      }
+    },
+    "shared-reserved": {
+      "kpi": {
+        "conditional_mean_detection_time_s": {
+          "ci_half_width": 3.354961150497928,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            131.84565573457132,
+            138.55557803556718
+          ],
+          "max": 166.72371958276747,
+          "mean": 135.24524498255803,
+          "min": 106.1164032200272,
+          "valid_seed_count": 80
+        },
+        "detection_probability_per_covered_area": {
+          "ci_half_width": 0.17116348128140135,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            4.695534918286121,
+            5.037861880848924
+          ],
+          "max": 7.408535528665055,
+          "mean": 4.862772946229855,
+          "min": 3.448796296940414,
+          "valid_seed_count": 80
+        },
+        "detection_probability_within_limit": {
+          "ci_half_width": 0.01866921874999994,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.5955371875000001,
+            0.6328756249999999
+          ],
+          "max": 0.797,
+          "mean": 0.614075,
+          "min": 0.421,
+          "trajectory_level_wilson_interval": [
+            0.6106962191510413,
+            0.6174428260146162
+          ],
+          "valid_seed_count": 80
+        },
+        "escape_rate": {
+          "ci_half_width": 0.00011875,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.0002125,
+            0.00045
+          ],
+          "max": 0.002,
+          "mean": 0.000325,
+          "min": 0.0,
+          "valid_seed_count": 80
+        },
+        "failure_rate_within_limit": {
+          "ci_half_width": 0.01866921874999994,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.36712437500000006,
+            0.40446281249999994
+          ],
+          "max": 0.579,
+          "mean": 0.38592499999999996,
+          "min": 0.20299999999999996,
+          "valid_seed_count": 80
+        },
+        "in_area_miss_rate": {
+          "ci_half_width": 0.018738593750000004,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.3667240625,
+            0.40420125
+          ],
+          "max": 0.579,
+          "mean": 0.3856,
+          "min": 0.203,
+          "valid_seed_count": 80
+        },
+        "reliability": {
+          "checks": {
+            "coverage_ci_half_width": {
+              "observed": 0.003773549758162409,
+              "passed": true,
+              "required_maximum": 0.02
+            },
+            "detection_ci_half_width": {
+              "observed": 0.01866921874999994,
+              "passed": true,
+              "required_maximum": 0.03
+            },
+            "minimum_samples_per_seed": {
+              "observed": 1000,
+              "passed": true,
+              "required": 1000
+            },
+            "minimum_seed_count": {
+              "observed": 80,
+              "passed": true,
+              "required": 20
+            },
+            "restricted_time_ci_half_width_s": {
+              "observed": 3.5710661357375386,
+              "passed": true,
+              "required_maximum": 10.0
+            }
+          },
+          "criteria": {
+            "bootstrap_resamples": 5000,
+            "confidence": 0.95,
+            "maximum_coverage_ci_half_width": 0.02,
+            "maximum_detection_change": 0.01,
+            "maximum_detection_ci_half_width": 0.03,
+            "maximum_restricted_time_change_s": 5.0,
+            "maximum_restricted_time_ci_half_width_s": 10.0,
+            "minimum_samples_per_seed": 1000,
+            "minimum_seed_count": 20
+          },
+          "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+          "status": "reliable",
+          "trajectory_level_required_sample_count": 1068
+        },
+        "restricted_mean_detection_time_s": {
+          "ci_half_width": 3.5710661357375386,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            195.1963006285641,
+            202.33843290003918
+          ],
+          "max": 231.3827357071647,
+          "mean": 198.8282238126643,
+          "min": 150.6333904170677,
+          "valid_seed_count": 80
+        },
+        "samples_per_seed": {
+          "max": 1000,
+          "min": 1000
+        },
+        "seed_count": 80,
+        "team": {
+          "coverage_redundancy_ratio": {
+            "ci_half_width": 0.014671799980878003,
+            "confidence_interval": [
+              0.49093273742383686,
+              0.5202763373855929
+            ],
+            "max": 0.6583728278041074,
+            "mean": 0.5057331231018642,
+            "min": 0.33666296707362187
+          },
+          "max_route_distance_m": {
+            "ci_half_width": 22.551056535887255,
+            "confidence_interval": [
+              11105.214697239997,
+              11150.316810311771
+            ],
+            "max": 11318.957980061166,
+            "mean": 11127.964468586402,
+            "min": 10838.338633620673
+          },
+          "mean_route_distance_m": {
+            "ci_half_width": 20.50370733644013,
+            "confidence_interval": [
+              10870.177396129819,
+              10911.184810802699
+            ],
+            "max": 11060.297161435237,
+            "mean": 10890.453612632773,
+            "min": 10627.973445785074
+          },
+          "team_total_distance_m": {
+            "ci_half_width": 123.4912798031728,
+            "confidence_interval": [
+              65216.52545781952,
+              65463.50801742587
+            ],
+            "max": 66361.78296861143,
+            "mean": 65342.721675796645,
+            "min": 63767.840674710445
+          },
+          "uav_count": 6
+        },
+        "total_detected_count": 49126.0,
+        "total_sample_count": 80000,
+        "unique_area_coverage_ratio": {
+          "ci_half_width": 0.003773549758162409,
+          "ci_method": "planning-seed cluster percentile bootstrap",
+          "confidence": 0.95,
+          "confidence_interval": [
+            0.12403733589907256,
+            0.13158443541539738
+          ],
+          "max": 0.17440186147192918,
+          "mean": 0.12781161516864661,
+          "min": 0.08413698280714933,
+          "valid_seed_count": 80
+        }
+      }
+    }
+  },
+  "cooperation_gain": {
+    "_factor_note": "independent -> shared-past \ub294 \uacfc\uac70 \uad00\uce21\uc744 \uacf5\uc720\ud558\ub294 \ud6a8\uacfc, shared-past -> shared \ub294 \uac19\uc740 \uc2ac\ub77c\uc774\uc2a4\uc5d0 \ub3d9\ub8cc\uc758 **\uc608\uc815\ub41c** \ud0d0\uc0c9\uc744 \uace0\ub824\ud558\ub294 \ud6a8\uacfc\ub2e4. \ud6c4\uc790\ub294 \uc2e4\uc81c \ud45c\uc801 \uc815\ubcf4\ub97c \ub354 \uc5bb\ub294 \uac83\uc774 \uc544\ub2c8\ub77c \uacc4\ud68d\uc744 \uc870\uc728\ud558\ub294 \uac83\uc774\ubbc0\ub85c, \ub458\uc744 \ud569\uccd0 '\uc815\ubcf4\uacf5\uc720 \uc774\ub4dd' \uc774\ub77c \ubd80\ub974\uba74 \uc548 \ub41c\ub2e4.",
+    "belief_sharing_gain_deprecated": 0.326775,
+    "effort_normalised": {
+      "note": "detection probability per unit swept area; use this when fairness_check.equal_swept_effort is false",
+      "past_observation_sharing_gain": -0.2369226113081382,
+      "route_reservation_gain": -0.17757828700948686,
+      "total_cooperation_gain": -2.2324832095740756,
+      "within_slice_coordination_gain": -1.8179823112564506
+    },
+    "past_observation_sharing_gain": 0.011899999999999966,
+    "redundancy_reduction": 0.327600210231469,
+    "route_reservation_gain": 0.010325000000000029,
+    "total_cooperation_gain": 0.3371,
+    "within_slice_coordination_gain": 0.314875
+  },
+  "fairness_check": {
+    "criterion": "mean relative spread of the controlled resource (mission time)",
+    "equal_mission_time": true,
+    "equal_swept_effort": false,
+    "equal_total_effort": true,
+    "max_absolute_spread_m": 3458.0734727898307,
+    "max_relative_spread": 0.014433702927305501,
+    "mean_relative_spread": 0.006721951563904172,
+    "mission_time_s": {
+      "max_absolute_spread": 4.2330158685274455,
+      "max_relative_spread": 0.014433702927305501,
+      "mean_relative_spread": 0.006721951563904172
+    },
+    "note": "mission time is the controlled resource; swept centerline length is the search-theoretic effort. Total flown distance includes transit and is NOT an effort proxy: reservation raises the transit fraction, so it flies further while sweeping less within the same time window.",
+    "seed_count": 80,
+    "swept_centerline_distance_m": {
+      "max_absolute_spread": 4609.718042049535,
+      "max_relative_spread": 0.23030572134808222,
+      "mean_relative_spread": 0.11123380370648342
+    },
+    "team_total_distance_m": {
+      "max_absolute_spread": 3458.0734727898307,
+      "max_relative_spread": 0.05231132119057535,
+      "mean_relative_spread": 0.021950835796012924
+    },
+    "tolerance": 0.05
+  },
+  "paired_comparisons_vs_shared_reserved": {
+    "independent": {
+      "detection_probability_within_limit": {
+        "ci_method": "paired planning-seed cluster percentile bootstrap",
+        "confidence": 0.95,
+        "confidence_interval": [
+          0.31987437500000004,
+          0.3535375
+        ],
+        "inference_valid": true,
+        "mean_difference": 0.33710000000000007,
+        "mean_difference_is": "shared-reserved minus independent",
+        "paired_seeds": [
+          10188441,
+          38439906,
+          66691371,
+          94942836,
+          129863605,
+          158115070,
+          186366535,
+          214618000,
+          249538769,
+          277790234,
+          306041699,
+          334293164,
+          362544629,
+          369213933,
+          397465398,
+          425716863,
+          453968328,
+          482219793,
+          488889097,
+          517140562,
+          545392027,
+          573643492,
+          601894957,
+          636815726,
+          665067191,
+          693318656,
+          721570121,
+          756490890,
+          784742355,
+          812993820,
+          841245285,
+          876166054,
+          904417519,
+          932668984,
+          960920449,
+          989171914,
+          995841218,
+          1024092683,
+          1052344148,
+          1080595613,
+          1108847078,
+          1115516382,
+          1143767847,
+          1172019312,
+          1200270777,
+          1228522242,
+          1263443011,
+          1291694476,
+          1319945941,
+          1348197406,
+          1383118175,
+          1411369640,
+          1439621105,
+          1467872570,
+          1496124035,
+          1502793339,
+          1531044804,
+          1559296269,
+          1587547734,
+          1615799199,
+          1622468503,
+          1650719968,
+          1678971433,
+          1707222898,
+          1735474363,
+          1770395132,
+          1798646597,
+          1826898062,
+          1855149527,
+          1890070296,
+          1918321761,
+          1946573226,
+          1974824691,
+          2003076156,
+          2009745460,
+          2037996925,
+          2066248390,
+          2094499855,
+          2122751320,
+          2129420624
+        ],
+        "seed_count": 80,
+        "significant": true,
+        "status": "valid"
+      },
+      "restricted_mean_detection_time_s": {
+        "ci_method": "paired planning-seed cluster percentile bootstrap",
+        "confidence": 0.95,
+        "confidence_interval": [
+          -60.13616049665884,
+          -54.94370498518435
+        ],
+        "inference_valid": true,
+        "mean_difference": -57.56597987766382,
+        "mean_difference_is": "shared-reserved minus independent",
+        "paired_seeds": [
+          10188441,
+          38439906,
+          66691371,
+          94942836,
+          129863605,
+          158115070,
+          186366535,
+          214618000,
+          249538769,
+          277790234,
+          306041699,
+          334293164,
+          362544629,
+          369213933,
+          397465398,
+          425716863,
+          453968328,
+          482219793,
+          488889097,
+          517140562,
+          545392027,
+          573643492,
+          601894957,
+          636815726,
+          665067191,
+          693318656,
+          721570121,
+          756490890,
+          784742355,
+          812993820,
+          841245285,
+          876166054,
+          904417519,
+          932668984,
+          960920449,
+          989171914,
+          995841218,
+          1024092683,
+          1052344148,
+          1080595613,
+          1108847078,
+          1115516382,
+          1143767847,
+          1172019312,
+          1200270777,
+          1228522242,
+          1263443011,
+          1291694476,
+          1319945941,
+          1348197406,
+          1383118175,
+          1411369640,
+          1439621105,
+          1467872570,
+          1496124035,
+          1502793339,
+          1531044804,
+          1559296269,
+          1587547734,
+          1615799199,
+          1622468503,
+          1650719968,
+          1678971433,
+          1707222898,
+          1735474363,
+          1770395132,
+          1798646597,
+          1826898062,
+          1855149527,
+          1890070296,
+          1918321761,
+          1946573226,
+          1974824691,
+          2003076156,
+          2009745460,
+          2037996925,
+          2066248390,
+          2094499855,
+          2122751320,
+          2129420624
+        ],
+        "seed_count": 80,
+        "significant": true,
+        "status": "valid"
+      }
+    },
+    "shared": {
+      "detection_probability_within_limit": {
+        "ci_method": "paired planning-seed cluster percentile bootstrap",
+        "confidence": 0.95,
+        "confidence_interval": [
+          0.0024125000000000036,
+          0.0189878125
+        ],
+        "inference_valid": true,
+        "mean_difference": 0.010325,
+        "mean_difference_is": "shared-reserved minus shared",
+        "paired_seeds": [
+          10188441,
+          38439906,
+          66691371,
+          94942836,
+          129863605,
+          158115070,
+          186366535,
+          214618000,
+          249538769,
+          277790234,
+          306041699,
+          334293164,
+          362544629,
+          369213933,
+          397465398,
+          425716863,
+          453968328,
+          482219793,
+          488889097,
+          517140562,
+          545392027,
+          573643492,
+          601894957,
+          636815726,
+          665067191,
+          693318656,
+          721570121,
+          756490890,
+          784742355,
+          812993820,
+          841245285,
+          876166054,
+          904417519,
+          932668984,
+          960920449,
+          989171914,
+          995841218,
+          1024092683,
+          1052344148,
+          1080595613,
+          1108847078,
+          1115516382,
+          1143767847,
+          1172019312,
+          1200270777,
+          1228522242,
+          1263443011,
+          1291694476,
+          1319945941,
+          1348197406,
+          1383118175,
+          1411369640,
+          1439621105,
+          1467872570,
+          1496124035,
+          1502793339,
+          1531044804,
+          1559296269,
+          1587547734,
+          1615799199,
+          1622468503,
+          1650719968,
+          1678971433,
+          1707222898,
+          1735474363,
+          1770395132,
+          1798646597,
+          1826898062,
+          1855149527,
+          1890070296,
+          1918321761,
+          1946573226,
+          1974824691,
+          2003076156,
+          2009745460,
+          2037996925,
+          2066248390,
+          2094499855,
+          2122751320,
+          2129420624
+        ],
+        "seed_count": 80,
+        "significant": true,
+        "status": "valid"
+      },
+      "restricted_mean_detection_time_s": {
+        "ci_method": "paired planning-seed cluster percentile bootstrap",
+        "confidence": 0.95,
+        "confidence_interval": [
+          -4.1858745337214,
+          -1.1953283712589355
+        ],
+        "inference_valid": true,
+        "mean_difference": -2.6435921981112047,
+        "mean_difference_is": "shared-reserved minus shared",
+        "paired_seeds": [
+          10188441,
+          38439906,
+          66691371,
+          94942836,
+          129863605,
+          158115070,
+          186366535,
+          214618000,
+          249538769,
+          277790234,
+          306041699,
+          334293164,
+          362544629,
+          369213933,
+          397465398,
+          425716863,
+          453968328,
+          482219793,
+          488889097,
+          517140562,
+          545392027,
+          573643492,
+          601894957,
+          636815726,
+          665067191,
+          693318656,
+          721570121,
+          756490890,
+          784742355,
+          812993820,
+          841245285,
+          876166054,
+          904417519,
+          932668984,
+          960920449,
+          989171914,
+          995841218,
+          1024092683,
+          1052344148,
+          1080595613,
+          1108847078,
+          1115516382,
+          1143767847,
+          1172019312,
+          1200270777,
+          1228522242,
+          1263443011,
+          1291694476,
+          1319945941,
+          1348197406,
+          1383118175,
+          1411369640,
+          1439621105,
+          1467872570,
+          1496124035,
+          1502793339,
+          1531044804,
+          1559296269,
+          1587547734,
+          1615799199,
+          1622468503,
+          1650719968,
+          1678971433,
+          1707222898,
+          1735474363,
+          1770395132,
+          1798646597,
+          1826898062,
+          1855149527,
+          1890070296,
+          1918321761,
+          1946573226,
+          1974824691,
+          2003076156,
+          2009745460,
+          2037996925,
+          2066248390,
+          2094499855,
+          2122751320,
+          2129420624
+        ],
+        "seed_count": 80,
+        "significant": true,
+        "status": "valid"
+      }
+    }
+  },
+  "provenance": {
+    "chapter": "5a",
+    "code_fingerprint": "6453ebc017a552a8",
+    "config_files": [
+      "chapter5a_cooperation.json"
+    ],
+    "package_version": "source",
+    "result_schema_version": 2,
+    "schema_version": 2
+  },
+  "ranking_status": "confirmatory",
+  "reliability": {
+    "independent": {
+      "final_reliability": {
+        "checks": {
+          "coverage_ci_half_width": {
+            "observed": 0.001253558973792715,
+            "passed": true,
+            "required_maximum": 0.02
+          },
+          "detection_ci_half_width": {
+            "observed": 0.012437656249999984,
+            "passed": true,
+            "required_maximum": 0.03
+          },
+          "minimum_samples_per_seed": {
+            "observed": 1000,
+            "passed": true,
+            "required": 1000
+          },
+          "minimum_seed_count": {
+            "observed": 80,
+            "passed": true,
+            "required": 20
+          },
+          "restricted_time_ci_half_width_s": {
+            "observed": 1.9221915861031107,
+            "passed": true,
+            "required_maximum": 10.0
+          }
+        },
+        "criteria": {
+          "bootstrap_resamples": 5000,
+          "confidence": 0.95,
+          "maximum_coverage_ci_half_width": 0.02,
+          "maximum_detection_change": 0.01,
+          "maximum_detection_ci_half_width": 0.03,
+          "maximum_restricted_time_change_s": 5.0,
+          "maximum_restricted_time_ci_half_width_s": 10.0,
+          "minimum_samples_per_seed": 1000,
+          "minimum_seed_count": 20
+        },
+        "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+        "status": "reliable",
+        "trajectory_level_required_sample_count": 1068
+      },
+      "sample_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.016000000000000014,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.268875,
+              0.300875
+            ],
+            "max": 0.51,
+            "mean": 0.284375,
+            "min": 0.15,
+            "trajectory_level_wilson_interval": [
+              0.27459498156642925,
+              0.29436199768533966
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 2.6313480807995546,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              252.43610739036066,
+              257.69880355195977
+            ],
+            "max": 281.4306275458373,
+            "mean": 255.0798871881492,
+            "min": 225.90553362261713,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 100,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0012566593972921161,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03818867614978588,
+              0.040701994944370115
+            ],
+            "max": 0.05164940794288589,
+            "mean": 0.039448329583496526,
+            "min": 0.02801323820631099,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.013521354166666638,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2664572916666667,
+              0.2935
+            ],
+            "max": 0.44666666666666666,
+            "mean": 0.2796666666666667,
+            "min": 0.15333333333333332,
+            "trajectory_level_wilson_interval": [
+              0.27402382562088473,
+              0.28538002987685124
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 2.1417905764672014,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              253.9973514615565,
+              258.2809326144909
+            ],
+            "max": 277.2364968770656,
+            "mean": 256.18146843520384,
+            "min": 232.09283842140593,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 300,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0012572673234684632,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.038228677692189864,
+              0.04074321233912679
+            ],
+            "max": 0.05164940794288589,
+            "mean": 0.039448329583496526,
+            "min": 0.02801323820631099,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.01231359374999999,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2647734375,
+              0.28940062499999997
+            ],
+            "max": 0.45,
+            "mean": 0.276975,
+            "min": 0.168,
+            "trajectory_level_wilson_interval": [
+              0.2738847770362057,
+              0.2800866404692007
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 1.8683626579280457,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              254.51040156458149,
+              258.2471268804376
+            ],
+            "max": 272.83204176879445,
+            "mean": 256.3942036903282,
+            "min": 229.5610947621441,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 1000,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.001248118034514363,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03820445183406222,
+              0.04070068790309095
+            ],
+            "max": 0.05164940794288589,
+            "mean": 0.039448329583496526,
+            "min": 0.02801323820631099,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "sample_stability": {
+        "detection_probability_change": 0.0026916666666666478,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.21273525512435754,
+        "stable": true
+      },
+      "seed_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.08,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.215,
+              0.375
+            ],
+            "max": 0.45,
+            "mean": 0.2862,
+            "min": 0.193,
+            "trajectory_level_wilson_interval": [
+              0.27383974116723653,
+              0.29888852818447
+            ],
+            "valid_seed_count": 5
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 12.728831049618549,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              242.20313969222912,
+              267.6608017914662
+            ],
+            "max": 272.83204176879445,
+            "mean": 256.9343100352787,
+            "min": 229.5610947621441,
+            "valid_seed_count": 5
+          },
+          "seed_count": 5,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0035891961451836006,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03624212692941484,
+              0.043420519219782044
+            ],
+            "max": 0.045521512085255365,
+            "mean": 0.04026902992157205,
+            "min": 0.032779379428912514,
+            "valid_seed_count": 5
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.047850000000000004,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2364,
+              0.3321
+            ],
+            "max": 0.45,
+            "mean": 0.2807,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.27197857365203726,
+              0.2895898480333414
+            ],
+            "valid_seed_count": 10
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 6.999525545106934,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              249.21289734359829,
+              263.21194843381215
+            ],
+            "max": 272.83204176879445,
+            "mean": 256.8318562373606,
+            "min": 229.5610947621441,
+            "valid_seed_count": 10
+          },
+          "seed_count": 10,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0027915970018094587,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03752606701387077,
+              0.043109261017489686
+            ],
+            "max": 0.04756414403779888,
+            "mean": 0.040385751747431684,
+            "min": 0.032779379428912514,
+            "valid_seed_count": 10
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.029400624999999986,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2508,
+              0.30960125
+            ],
+            "max": 0.45,
+            "mean": 0.2783,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.2721319316301623,
+              0.2845532171571145
+            ],
+            "valid_seed_count": 20
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 4.275446438275125,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              253.20749294610656,
+              261.7583858226568
+            ],
+            "max": 272.83204176879445,
+            "mean": 257.73893428791615,
+            "min": 229.5610947621441,
+            "valid_seed_count": 20
+          },
+          "seed_count": 20,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.002178868208664045,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03937902599939238,
+              0.04373676241672047
+            ],
+            "max": 0.05077399424893867,
+            "mean": 0.04157728705308206,
+            "min": 0.032779379428912514,
+            "valid_seed_count": 20
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.012337968749999983,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2647621875,
+              0.289438125
+            ],
+            "max": 0.45,
+            "mean": 0.276975,
+            "min": 0.168,
+            "trajectory_level_wilson_interval": [
+              0.2738847770362057,
+              0.2800866404692007
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 1.9349264274239601,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              254.46015080273799,
+              258.3300036575859
+            ],
+            "max": 272.83204176879445,
+            "mean": 256.3942036903282,
+            "min": 229.5610947621441,
+            "valid_seed_count": 80
+          },
+          "seed_count": 80,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0012560970655789844,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.03817283967289191,
+              0.04068503380404988
+            ],
+            "max": 0.05164940794288589,
+            "mean": 0.039448329583496526,
+            "min": 0.02801323820631099,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "seed_stability": {
+        "detection_probability_change": 0.001324999999999965,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 1.3447305975879544,
+        "stable": true
+      }
+    },
+    "shared": {
+      "final_reliability": {
+        "checks": {
+          "coverage_ci_half_width": {
+            "observed": 0.0038337192514668744,
+            "passed": true,
+            "required_maximum": 0.02
+          },
+          "detection_ci_half_width": {
+            "observed": 0.01938812499999998,
+            "passed": true,
+            "required_maximum": 0.03
+          },
+          "minimum_samples_per_seed": {
+            "observed": 1000,
+            "passed": true,
+            "required": 1000
+          },
+          "minimum_seed_count": {
+            "observed": 80,
+            "passed": true,
+            "required": 20
+          },
+          "restricted_time_ci_half_width_s": {
+            "observed": 3.701732483381406,
+            "passed": true,
+            "required_maximum": 10.0
+          }
+        },
+        "criteria": {
+          "bootstrap_resamples": 5000,
+          "confidence": 0.95,
+          "maximum_coverage_ci_half_width": 0.02,
+          "maximum_detection_change": 0.01,
+          "maximum_detection_ci_half_width": 0.03,
+          "maximum_restricted_time_change_s": 5.0,
+          "maximum_restricted_time_ci_half_width_s": 10.0,
+          "minimum_samples_per_seed": 1000,
+          "minimum_seed_count": 20
+        },
+        "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+        "status": "reliable",
+        "trajectory_level_required_sample_count": 1068
+      },
+      "sample_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.02081250000000001,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.591625,
+              0.63325
+            ],
+            "max": 0.86,
+            "mean": 0.612375,
+            "min": 0.38,
+            "trajectory_level_wilson_interval": [
+              0.601647266596236,
+              0.6229948642169001
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 4.179578739556817,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              195.30208803747945,
+              203.66124551659308
+            ],
+            "max": 236.6332716418392,
+            "mean": 199.43355720593635,
+            "min": 147.56331865921317,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 100,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0037808144759698195,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11749003177237664,
+              0.12505166072431628
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12115360768523693,
+            "min": 0.08452605556001476,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.020459895833333297,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.580871875,
+              0.6217916666666666
+            ],
+            "max": 0.81,
+            "mean": 0.6012083333333333,
+            "min": 0.37666666666666665,
+            "trajectory_level_wilson_interval": [
+              0.5949978007996574,
+              0.607386472081583
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.8689529504902396,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              197.79207883326933,
+              205.5299847342498
+            ],
+            "max": 237.6600137748855,
+            "mean": 201.69166422101048,
+            "min": 157.04236396533062,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 300,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0037557679175041075,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11753401523123572,
+              0.12504555106624393
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12115360768523693,
+            "min": 0.08452605556001476,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.019457499999999905,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5842487500000001,
+              0.6231637499999999
+            ],
+            "max": 0.787,
+            "mean": 0.60375,
+            "min": 0.392,
+            "trajectory_level_wilson_interval": [
+              0.6003557469279447,
+              0.6071342897666595
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.774364339006155,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              197.7635326541385,
+              205.3122613321508
+            ],
+            "max": 234.81866596381172,
+            "mean": 201.47181601077554,
+            "min": 159.6896372066018,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 1000,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.003840907978502235,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.1173431264118611,
+              0.12502494236886558
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12115360768523693,
+            "min": 0.08452605556001476,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "sample_stability": {
+        "detection_probability_change": 0.0025416666666666643,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.21984821023494305,
+        "stable": true
+      },
+      "seed_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.05459999999999998,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.6318,
+              0.741
+            ],
+            "max": 0.787,
+            "mean": 0.6864,
+            "min": 0.603,
+            "trajectory_level_wilson_interval": [
+              0.6734010771477418,
+              0.6991127235671409
+            ],
+            "valid_seed_count": 5
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 15.105398171671368,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              174.89196464500992,
+              205.10276098835266
+            ],
+            "max": 208.26662042035812,
+            "mean": 191.4123695371827,
+            "min": 159.6896372066018,
+            "valid_seed_count": 5
+          },
+          "seed_count": 5,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.019794076302028757,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11152770460887562,
+              0.15111585721293314
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12800493569272658,
+            "min": 0.10281247494469,
+            "valid_seed_count": 5
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.053951250000000006,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5890974999999999,
+              0.697
+            ],
+            "max": 0.787,
+            "mean": 0.6439,
+            "min": 0.469,
+            "trajectory_level_wilson_interval": [
+              0.6344611872771158,
+              0.6532282979918036
+            ],
+            "valid_seed_count": 10
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 10.373533233205407,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              185.35472512891005,
+              206.10179159532086
+            ],
+            "max": 223.55254762867568,
+            "mean": 195.89065524131544,
+            "min": 159.6896372066018,
+            "valid_seed_count": 10
+          },
+          "seed_count": 10,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0134236179000337,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.1170231140726293,
+              0.1438703498726967
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12950286579125853,
+            "min": 0.10281247494469,
+            "valid_seed_count": 10
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.03932624999999995,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.57464875,
+              0.65330125
+            ],
+            "max": 0.787,
+            "mean": 0.61335,
+            "min": 0.428,
+            "trajectory_level_wilson_interval": [
+              0.6065797391134227,
+              0.6200767263126583
+            ],
+            "valid_seed_count": 20
+          },
+          "reliability_status": "precision-not-met",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 7.6801740649012515,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              192.95987012291394,
+              208.32021825271644
+            ],
+            "max": 229.97911387333974,
+            "mean": 200.68454349799808,
+            "min": 159.6896372066018,
+            "valid_seed_count": 20
+          },
+          "seed_count": 20,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.009688033131584506,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11463043822774216,
+              0.13400650449091117
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12399262292880187,
+            "min": 0.08452605556001476,
+            "valid_seed_count": 20
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.019325624999999957,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.584461875,
+              0.6231131249999999
+            ],
+            "max": 0.787,
+            "mean": 0.60375,
+            "min": 0.392,
+            "trajectory_level_wilson_interval": [
+              0.6003557469279447,
+              0.6071342897666595
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.6808578690730656,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              197.80851964711545,
+              205.17023538526158
+            ],
+            "max": 234.81866596381172,
+            "mean": 201.47181601077554,
+            "min": 159.6896372066018,
+            "valid_seed_count": 80
+          },
+          "seed_count": 80,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0037742032788019853,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11750325416671231,
+              0.12505166072431628
+            ],
+            "max": 0.17148381582543845,
+            "mean": 0.12115360768523693,
+            "min": 0.08452605556001476,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "seed_stability": {
+        "detection_probability_change": 0.009599999999999942,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.7872725127774629,
+        "stable": true
+      }
+    },
+    "shared-past": {
+      "final_reliability": {
+        "checks": {
+          "coverage_ci_half_width": {
+            "observed": 0.0010225470267788694,
+            "passed": true,
+            "required_maximum": 0.02
+          },
+          "detection_ci_half_width": {
+            "observed": 0.012107499999999966,
+            "passed": true,
+            "required_maximum": 0.03
+          },
+          "minimum_samples_per_seed": {
+            "observed": 1000,
+            "passed": true,
+            "required": 1000
+          },
+          "minimum_seed_count": {
+            "observed": 80,
+            "passed": true,
+            "required": 20
+          },
+          "restricted_time_ci_half_width_s": {
+            "observed": 1.9448909336899618,
+            "passed": true,
+            "required_maximum": 10.0
+          }
+        },
+        "criteria": {
+          "bootstrap_resamples": 5000,
+          "confidence": 0.95,
+          "maximum_coverage_ci_half_width": 0.02,
+          "maximum_detection_change": 0.01,
+          "maximum_detection_ci_half_width": 0.03,
+          "maximum_restricted_time_change_s": 5.0,
+          "maximum_restricted_time_ci_half_width_s": 10.0,
+          "minimum_samples_per_seed": 1000,
+          "minimum_seed_count": 20
+        },
+        "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+        "status": "reliable",
+        "trajectory_level_required_sample_count": 1068
+      },
+      "sample_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.016814062500000004,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.282746875,
+              0.316375
+            ],
+            "max": 0.51,
+            "mean": 0.299125,
+            "min": 0.15,
+            "trajectory_level_wilson_interval": [
+              0.28918991788214643,
+              0.3092529027889217
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 2.569052864617703,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              251.69456392115728,
+              256.8326696503927
+            ],
+            "max": 279.948513869636,
+            "mean": 254.24916392766545,
+            "min": 225.90553362261713,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 100,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0010311187858654328,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04139481801124994,
+              0.043457055582980804
+            ],
+            "max": 0.053108430766131254,
+            "mean": 0.04243081540468059,
+            "min": 0.03034767472350357,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.013146354166666652,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.278790625,
+              0.3050833333333333
+            ],
+            "max": 0.44666666666666666,
+            "mean": 0.291875,
+            "min": 0.15333333333333332,
+            "trajectory_level_wilson_interval": [
+              0.2861569756725214,
+              0.2976596389665086
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 2.136517967407059,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              253.384542323789,
+              257.6575782586031
+            ],
+            "max": 276.03391199128873,
+            "mean": 255.5222439928674,
+            "min": 232.09283842140593,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 300,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.00102323094372727,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.041433694890227656,
+              0.043480156777682195
+            ],
+            "max": 0.053108430766131254,
+            "mean": 0.04243081540468059,
+            "min": 0.03034767472350357,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.012312812499999992,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2766746875,
+              0.3013003125
+            ],
+            "max": 0.45,
+            "mean": 0.288875,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.2857444631715587,
+              0.2920258115547227
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 1.9507620237887124,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              253.85127482319172,
+              257.75279887076914
+            ],
+            "max": 272.31950390650945,
+            "mean": 255.7902327432407,
+            "min": 229.5610947621441,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 1000,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0010104037014062352,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04140946903210002,
+              0.04343027643491249
+            ],
+            "max": 0.053108430766131254,
+            "mean": 0.04243081540468059,
+            "min": 0.03034767472350357,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "sample_stability": {
+        "detection_probability_change": 0.0030000000000000027,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.2679887503732914,
+        "stable": true
+      },
+      "seed_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.0682,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2442,
+              0.3806
+            ],
+            "max": 0.45,
+            "mean": 0.304,
+            "min": 0.222,
+            "trajectory_level_wilson_interval": [
+              0.2914046432275638,
+              0.3168962959348986
+            ],
+            "valid_seed_count": 5
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 12.78798319630873,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              241.18300371537023,
+              266.7589701079877
+            ],
+            "max": 272.31950390650945,
+            "mean": 255.71373666477706,
+            "min": 229.5610947621441,
+            "valid_seed_count": 5
+          },
+          "seed_count": 5,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0022566219666194966,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04161133091895779,
+              0.04612457485219678
+            ],
+            "max": 0.04707780309671709,
+            "mean": 0.043965221073793644,
+            "min": 0.04036629810978841,
+            "valid_seed_count": 5
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.04725249999999999,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2474975,
+              0.3420025
+            ],
+            "max": 0.45,
+            "mean": 0.2929,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.2840612263644113,
+              0.3018978257607228
+            ],
+            "valid_seed_count": 10
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 7.229398402019655,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              248.08684481305488,
+              262.5456416170942
+            ],
+            "max": 272.31950390650945,
+            "mean": 256.0609424516865,
+            "min": 229.5610947621441,
+            "valid_seed_count": 10
+          },
+          "seed_count": 10,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0026506797141310177,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04035657129096677,
+              0.04565793071922881
+            ],
+            "max": 0.048828630484611515,
+            "mean": 0.04308008056102478,
+            "min": 0.03521108413432145,
+            "valid_seed_count": 10
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.028450625000000007,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.26205,
+              0.31895125
+            ],
+            "max": 0.45,
+            "mean": 0.2895,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.28325540310951247,
+              0.2958254440701076
+            ],
+            "valid_seed_count": 20
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 4.220653579269978,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              252.61591938927867,
+              261.05722654781863
+            ],
+            "max": 272.31950390650945,
+            "mean": 257.0987858361685,
+            "min": 229.5610947621441,
+            "valid_seed_count": 20
+          },
+          "seed_count": 20,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0019308343287123345,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04199055526776631,
+              0.04585222392519098
+            ],
+            "max": 0.05077399424893867,
+            "mean": 0.04389713334204219,
+            "min": 0.03521108413432145,
+            "valid_seed_count": 20
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.011963124999999991,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.2768996875,
+              0.3008259375
+            ],
+            "max": 0.45,
+            "mean": 0.288875,
+            "min": 0.185,
+            "trajectory_level_wilson_interval": [
+              0.2857444631715587,
+              0.2920258115547227
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 1.9278093615790795,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              253.85956623122945,
+              257.7151849543876
+            ],
+            "max": 272.31950390650945,
+            "mean": 255.7902327432407,
+            "min": 229.5610947621441,
+            "valid_seed_count": 80
+          },
+          "seed_count": 80,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0010195225940515147,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.04142773721369941,
+              0.04346678240180244
+            ],
+            "max": 0.053108430766131254,
+            "mean": 0.04243081540468059,
+            "min": 0.03034767472350357,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "seed_stability": {
+        "detection_probability_change": 0.0006249999999999867,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 1.3085530929277809,
+        "stable": true
+      }
+    },
+    "shared-reserved": {
+      "final_reliability": {
+        "checks": {
+          "coverage_ci_half_width": {
+            "observed": 0.003858674621006121,
+            "passed": true,
+            "required_maximum": 0.02
+          },
+          "detection_ci_half_width": {
+            "observed": 0.019157031249999956,
+            "passed": true,
+            "required_maximum": 0.03
+          },
+          "minimum_samples_per_seed": {
+            "observed": 1000,
+            "passed": true,
+            "required": 1000
+          },
+          "minimum_seed_count": {
+            "observed": 80,
+            "passed": true,
+            "required": 20
+          },
+          "restricted_time_ci_half_width_s": {
+            "observed": 3.4691111317693526,
+            "passed": true,
+            "required_maximum": 10.0
+          }
+        },
+        "criteria": {
+          "bootstrap_resamples": 5000,
+          "confidence": 0.95,
+          "maximum_coverage_ci_half_width": 0.02,
+          "maximum_detection_change": 0.01,
+          "maximum_detection_ci_half_width": 0.03,
+          "maximum_restricted_time_change_s": 5.0,
+          "maximum_restricted_time_ci_half_width_s": 10.0,
+          "minimum_samples_per_seed": 1000,
+          "minimum_seed_count": 20
+        },
+        "note": "seed-cluster intervals are primary; Wilson only measures nested trajectory-level Bernoulli uncertainty",
+        "status": "reliable",
+        "trajectory_level_required_sample_count": 1068
+      },
+      "sample_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.020562499999999984,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.600375,
+              0.6415
+            ],
+            "max": 0.85,
+            "mean": 0.620375,
+            "min": 0.37,
+            "trajectory_level_wilson_interval": [
+              0.6096853520362635,
+              0.630949099546662
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.7938634994564353,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              193.49274041590203,
+              201.0804674148149
+            ],
+            "max": 235.65073758329152,
+            "mean": 197.2427962649013,
+            "min": 140.05731816219662,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 100,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.003802623827546453,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.12406675952600801,
+              0.13167200718110092
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.12781161516864661,
+            "min": 0.08413698280714933,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.019563541666666684,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5915822916666666,
+              0.630709375
+            ],
+            "max": 0.82,
+            "mean": 0.611625,
+            "min": 0.4066666666666667,
+            "trajectory_level_wilson_interval": [
+              0.6054415014255676,
+              0.6177727707229885
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.6290712022725984,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              195.17467375994482,
+              202.43281616449002
+            ],
+            "max": 232.10354693720487,
+            "mean": 198.8802590880996,
+            "min": 147.0148930530615,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 300,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.003827639989703341,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.12402177298895795,
+              0.13167705296836463
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.12781161516864661,
+            "min": 0.08413698280714933,
+            "valid_seed_count": 80
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.018689062499999964,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5955609375,
+              0.6329390625
+            ],
+            "max": 0.797,
+            "mean": 0.614075,
+            "min": 0.421,
+            "trajectory_level_wilson_interval": [
+              0.6106962191510413,
+              0.6174428260146162
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.5043340379882864,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              195.32585173160626,
+              202.33451980758284
+            ],
+            "max": 231.3827357071647,
+            "mean": 198.8282238126643,
+            "min": 150.6333904170677,
+            "valid_seed_count": 80
+          },
+          "sample_count_per_seed": 1000,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.003733335441596701,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.1240886448683567,
+              0.1315553157515501
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.12781161516864661,
+            "min": 0.08413698280714933,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "sample_stability": {
+        "detection_probability_change": 0.0024500000000000632,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.052035275435287076,
+        "stable": true
+      },
+      "seed_checkpoints": [
+        {
+          "detection_probability": {
+            "ci_half_width": 0.07419999999999999,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5894,
+              0.7378
+            ],
+            "max": 0.797,
+            "mean": 0.6604,
+            "min": 0.562,
+            "trajectory_level_wilson_interval": [
+              0.6471547765090825,
+              0.6733989447069432
+            ],
+            "valid_seed_count": 5
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 21.157983541436877,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              171.13835117121442,
+              213.45431825408818
+            ],
+            "max": 217.76853498256753,
+            "mean": 194.28766958641936,
+            "min": 150.6333904170677,
+            "valid_seed_count": 5
+          },
+          "seed_count": 5,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.01429842366780458,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11339525382262969,
+              0.14199210115823885
+            ],
+            "max": 0.15261378731146508,
+            "mean": 0.12683771743413033,
+            "min": 0.1075786161672915,
+            "valid_seed_count": 5
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.057551250000000054,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5881,
+              0.7032025000000001
+            ],
+            "max": 0.797,
+            "mean": 0.6441,
+            "min": 0.5,
+            "trajectory_level_wilson_interval": [
+              0.6346622886663074,
+              0.6534270430032636
+            ],
+            "valid_seed_count": 10
+          },
+          "reliability_status": "insufficient-design",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 12.77302653775206,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              181.0229806810803,
+              206.56903375658442
+            ],
+            "max": 218.176466048313,
+            "mean": 194.5970341070087,
+            "min": 150.6333904170677,
+            "valid_seed_count": 10
+          },
+          "seed_count": 10,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.012485223054216392,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.12036889657680146,
+              0.14533934268523424
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.1320610191413487,
+            "min": 0.1075786161672915,
+            "valid_seed_count": 10
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.038428749999999956,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5852437500000001,
+              0.66210125
+            ],
+            "max": 0.797,
+            "mean": 0.62245,
+            "min": 0.455,
+            "trajectory_level_wilson_interval": [
+              0.6157085853741735,
+              0.6291443849956864
+            ],
+            "valid_seed_count": 20
+          },
+          "reliability_status": "precision-not-met",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 7.847855633109489,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              189.8645007298225,
+              205.5602119960415
+            ],
+            "max": 227.43167761133319,
+            "mean": 198.23632594391813,
+            "min": 150.6333904170677,
+            "valid_seed_count": 20
+          },
+          "seed_count": 20,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.009114637162049057,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.11877783218805239,
+              0.1370071065121505
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.12771799453748836,
+            "min": 0.08413698280714933,
+            "valid_seed_count": 20
+          }
+        },
+        {
+          "detection_probability": {
+            "ci_half_width": 0.01866890624999995,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.5952121875,
+              0.63255
+            ],
+            "max": 0.797,
+            "mean": 0.614075,
+            "min": 0.421,
+            "trajectory_level_wilson_interval": [
+              0.6106962191510413,
+              0.6174428260146162
+            ],
+            "valid_seed_count": 80
+          },
+          "reliability_status": "reliable",
+          "restricted_mean_detection_time_s": {
+            "ci_half_width": 3.4460181637056024,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              195.4237837578265,
+              202.3158200852377
+            ],
+            "max": 231.3827357071647,
+            "mean": 198.8282238126643,
+            "min": 150.6333904170677,
+            "valid_seed_count": 80
+          },
+          "seed_count": 80,
+          "unique_area_coverage_ratio": {
+            "ci_half_width": 0.0037945840038641973,
+            "ci_method": "planning-seed cluster percentile bootstrap",
+            "confidence": 0.95,
+            "confidence_interval": [
+              0.12404955521521725,
+              0.13163872322294565
+            ],
+            "max": 0.17440186147192918,
+            "mean": 0.12781161516864661,
+            "min": 0.08413698280714933,
+            "valid_seed_count": 80
+          }
+        }
+      ],
+      "seed_stability": {
+        "detection_probability_change": 0.00837499999999991,
+        "maximum_detection_change": 0.01,
+        "maximum_restricted_time_change_s": 5.0,
+        "restricted_mean_detection_time_change_s": 0.5918978687461731,
+        "stable": true
+      }
+    }
+  }
+}

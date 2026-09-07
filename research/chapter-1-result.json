@@ -1,0 +1,362 @@
+{
+  "allocation_strategies": {
+    "koopman": {
+      "achieved_per_region_probability": [
+        0.10451255575397585,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "achieved_probability_of_success": 0.05006151420615442,
+      "achieved_standard_error": 0.006274752509296145,
+      "allocation": {
+        "effort": [
+          7310.976187970835,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "probability_of_detection": [
+          0.17955286588259733,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "probability_of_success": 0.08977643294129867,
+        "shadow_price": 1.1104621582745128e-05,
+        "total_effort": 7310.976187970835
+      },
+      "effort_share": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "execution": {
+        "actual_woven_distance_m": 10087.211286891552,
+        "centerline_sensing_distance_m": 7310.976187970836,
+        "effort_realisation_error": 1.2440126713439056e-16,
+        "estimated_completion_time_s": 300.4062237639848,
+        "executed_effort_m": [
+          7310.976187970836,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_effort_m": [
+          7310.976187970835,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "track_spacing_m": [
+          400.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "kpi": {
+        "actual_woven_distance_m": 10087.211286891552,
+        "conditional_mean_detection_time_s": 178.82163719231798,
+        "detected_count": 48,
+        "detection_probability_within_limit": 0.05006151420615442,
+        "failure_rate_within_limit": 0.9499384857938455,
+        "planned_centerline_distance_m": 9427.409072465427,
+        "restricted_mean_detection_time_s": 294.1834385852313,
+        "sample_count": 1000,
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "theoretical_probability_of_success": 0.08977643294129867,
+      "theory_minus_achieved": 0.039714918735144246
+    },
+    "proportional": {
+      "achieved_per_region_probability": [
+        0.08919912149405823,
+        0.011570294928952148,
+        0.0,
+        0.0
+      ],
+      "achieved_probability_of_success": 0.04629003003377116,
+      "achieved_standard_error": 0.005943011621288625,
+      "allocation": {
+        "effort": [
+          3655.4880939854174,
+          2193.2928563912506,
+          1096.6464281956253,
+          365.5488093985418
+        ],
+        "probability_of_detection": [
+          0.09421463131854313,
+          0.057643608045768846,
+          0.029249572776693933,
+          0.009846492795552497
+        ],
+        "probability_of_success": 0.06928015862928392,
+        "shadow_price": 1.0919503989003587e-05,
+        "total_effort": 7310.976187970835
+      },
+      "effort_share": [
+        0.5,
+        0.3,
+        0.15,
+        0.05
+      ],
+      "execution": {
+        "actual_woven_distance_m": 10577.38265949345,
+        "centerline_sensing_distance_m": 7310.976187970835,
+        "effort_realisation_error": 0.0,
+        "estimated_completion_time_s": 299.9329413304687,
+        "executed_effort_m": [
+          3655.4880939854174,
+          2193.2928563912506,
+          1096.6464281956253,
+          365.54880939854183
+        ],
+        "planned_effort_m": [
+          3655.4880939854174,
+          2193.2928563912506,
+          1096.6464281956253,
+          365.5488093985418
+        ],
+        "track_spacing_m": [
+          400.0,
+          400.0,
+          400.0,
+          400.0
+        ],
+        "unique_area_coverage_ratio": 0.0357946932636196
+      },
+      "kpi": {
+        "actual_woven_distance_m": 10577.38265949345,
+        "conditional_mean_detection_time_s": 172.61856972569916,
+        "detected_count": 45,
+        "detection_probability_within_limit": 0.04629003003377116,
+        "failure_rate_within_limit": 0.9537099699662288,
+        "planned_centerline_distance_m": 10017.88358022262,
+        "restricted_mean_detection_time_s": 294.26783563765645,
+        "sample_count": 1000,
+        "unique_area_coverage_ratio": 0.0357946932636196
+      },
+      "theoretical_probability_of_success": 0.06928015862928392,
+      "theory_minus_achieved": 0.022990128595512763
+    },
+    "stone": {
+      "achieved_per_region_probability": [
+        0.10451255575397585,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "achieved_probability_of_success": 0.05006151420615442,
+      "achieved_standard_error": 0.006274752509296145,
+      "allocation": {
+        "effort": [
+          7310.976187970835,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "probability_of_detection": [
+          0.17955286588259733,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "probability_of_success": 0.08977643294129867,
+        "shadow_price": 1.1104621582744935e-05,
+        "total_effort": 7310.976187970835
+      },
+      "effort_share": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "execution": {
+        "actual_woven_distance_m": 10087.211286891552,
+        "centerline_sensing_distance_m": 7310.976187970836,
+        "effort_realisation_error": 1.2440126713439056e-16,
+        "estimated_completion_time_s": 300.4062237639848,
+        "executed_effort_m": [
+          7310.976187970836,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_effort_m": [
+          7310.976187970835,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "track_spacing_m": [
+          400.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "kpi": {
+        "actual_woven_distance_m": 10087.211286891552,
+        "conditional_mean_detection_time_s": 178.82163719231798,
+        "detected_count": 48,
+        "detection_probability_within_limit": 0.05006151420615442,
+        "failure_rate_within_limit": 0.9499384857938455,
+        "planned_centerline_distance_m": 9427.409072465427,
+        "restricted_mean_detection_time_s": 294.1834385852313,
+        "sample_count": 1000,
+        "unique_area_coverage_ratio": 0.04065810267443749
+      },
+      "theoretical_probability_of_success": 0.08977643294129867,
+      "theory_minus_achieved": 0.039714918735144246
+    },
+    "uniform": {
+      "achieved_per_region_probability": [
+        0.048833436493450726,
+        0.04860443925454513,
+        0.036992651946654374,
+        0.0
+      ],
+      "achieved_probability_of_success": 0.04435419298612081,
+      "achieved_standard_error": 0.005567615990242,
+      "allocation": {
+        "effort": [
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087
+        ],
+        "probability_of_detection": [
+          0.048272429378313775,
+          0.048272429378313775,
+          0.048272429378313775,
+          0.048272429378313775
+        ],
+        "probability_of_success": 0.048272429378313775,
+        "shadow_price": 1.159333328611051e-05,
+        "total_effort": 7310.976187970835
+      },
+      "effort_share": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "execution": {
+        "actual_woven_distance_m": 9841.979240735483,
+        "centerline_sensing_distance_m": 7310.976187970835,
+        "effort_realisation_error": 0.0,
+        "estimated_completion_time_s": 299.871137882041,
+        "executed_effort_m": [
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087
+        ],
+        "planned_effort_m": [
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087,
+          1827.7440469927087
+        ],
+        "track_spacing_m": [
+          400.0,
+          400.0,
+          400.0,
+          400.0
+        ],
+        "unique_area_coverage_ratio": 0.05427564902472755
+      },
+      "kpi": {
+        "actual_woven_distance_m": 9841.979240735483,
+        "conditional_mean_detection_time_s": 169.43376899311568,
+        "detected_count": 47,
+        "detection_probability_within_limit": 0.04435419298612081,
+        "failure_rate_within_limit": 0.9556458070138791,
+        "planned_centerline_distance_m": 9141.595160166358,
+        "restricted_mean_detection_time_s": 293.86338714267646,
+        "sample_count": 1000,
+        "unique_area_coverage_ratio": 0.05427564902472755
+      },
+      "theoretical_probability_of_success": 0.048272429378313775,
+      "theory_minus_achieved": 0.003918236392192964
+    }
+  },
+  "analytic_vs_numeric": {
+    "koopman_shadow_price": 1.1104621582745128e-05,
+    "koopman_vs_stone_max_abs_effort_difference": 0.0,
+    "koopman_vs_stone_pos_difference": 0.0,
+    "stone_shadow_price": 1.1104621582744935e-05
+  },
+  "artifacts": {
+    "directory": "figures/chapter-1",
+    "files": [
+      "figures/chapter-1/chapter-1-kpi.csv",
+      "figures/chapter-1/figure-1-1-kpi-overview.png"
+    ],
+    "removed_stale": []
+  },
+  "best_strategy": "koopman",
+  "chapter": "1",
+  "condition": {
+    "asset_count": 1,
+    "effort_budget_centerline_m": 7310.976187970835,
+    "equivalent_sweep_width_m": 400.0,
+    "mission_time_s": 300.0,
+    "monte_carlo_sample_count": 1000,
+    "region_area_m2": [
+      14776678.845,
+      14776678.845,
+      14776678.845,
+      14776678.844999999
+    ],
+    "region_prior_mass": [
+      0.5,
+      0.3,
+      0.15,
+      0.05
+    ],
+    "seed": 20260830,
+    "target": "single stationary target"
+  },
+  "information_value_of_optimal_allocation": 0.005707321220033611,
+  "provenance": {
+    "chapter": "1",
+    "code_fingerprint": "6453ebc017a552a8",
+    "config_files": [
+      "chapter1_koopman_stone_sarops_core.json"
+    ],
+    "package_version": "source",
+    "result_schema_version": 2,
+    "schema_version": 2
+  },
+  "ranking_by_achieved_pos": [
+    "koopman",
+    "stone",
+    "proportional",
+    "uniform"
+  ],
+  "sarops_core_accordion": {
+    "achieved_probability_of_success": 0.034367191197969556,
+    "actual_total_distance_m": 10324.81409546114,
+    "centerline_sensing_distance_m": 4384.918903092051,
+    "kpi": {
+      "actual_woven_distance_m": 10324.81409546114,
+      "conditional_mean_detection_time_s": 192.26281272422008,
+      "detected_count": 34,
+      "detection_probability_within_limit": 0.034367191197969556,
+      "failure_rate_within_limit": 0.9656328088020304,
+      "planned_centerline_distance_m": 9713.602236576224,
+      "restricted_mean_detection_time_s": 296.33693563262347,
+      "sample_count": 1000,
+      "unique_area_coverage_ratio": 0.0435761483209282
+    },
+    "route_count": 1,
+    "theoretical_random_search_pos": 0.02923862264803545,
+    "track_spacing_m": 320.0,
+    "unique_area_coverage_ratio": 0.0435761483209282
+  }
+}

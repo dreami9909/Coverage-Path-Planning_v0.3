@@ -1,0 +1,7 @@
+condition,checkpoint_type,sample_count_per_seed,seed_count,detection_mean,detection_ci_low,detection_ci_high,restricted_time_mean_s,restricted_time_ci_low_s,restricted_time_ci_high_s,reliability_status
+independent,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+independent,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+shared,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+shared,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+shared-reserved,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+shared-reserved,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design

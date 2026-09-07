@@ -1,0 +1,9 @@
+condition,checkpoint_type,sample_count_per_seed,seed_count,detection_mean,detection_ci_low,detection_ci_high,restricted_time_mean_s,restricted_time_ci_low_s,restricted_time_ci_high_s,reliability_status
+myopic,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+myopic,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+beam,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+beam,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+fab,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+fab,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+fab-route,sample,100,,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design
+fab-route,seed,,2,0.0,0.0,0.0,120.0,120.0,120.0,insufficient-design

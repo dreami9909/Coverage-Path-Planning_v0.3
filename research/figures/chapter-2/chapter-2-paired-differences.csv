@@ -1,0 +1,3 @@
+condition,baseline,metric,mean_difference,mean_difference_is,ci_low,ci_high,winner
+fab-route,fab,detection_probability_within_limit,0.0007500000000000007,fab minus condition,-0.016151249999999992,0.018549999999999994,inconclusive
+myopic,fab,detection_probability_within_limit,0.009600000000000003,fab minus condition,-0.002749999999999997,0.02745000000000001,inconclusive

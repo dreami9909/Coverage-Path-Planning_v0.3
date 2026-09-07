@@ -1,0 +1,4 @@
+condition,unique_area_coverage_ratio,detection_probability_within_limit,conditional_mean_detection_time_s,restricted_mean_detection_time_s,failure_rate_within_limit,coverage_redundancy_ratio,mean_route_distance_m,max_route_distance_m,team_total_distance_m
+fab,0.04396522107379364,0.199,165.2101972630183,273.17682925534064,0.8009999999999999,,,,
+fab-route,0.033158725362956304,0.19825,143.43862978598844,268.96170835507223,0.80175,,,,
+myopic,0.04493790295595722,0.1894,165.86096493340833,274.59406675838756,0.8106,,,,

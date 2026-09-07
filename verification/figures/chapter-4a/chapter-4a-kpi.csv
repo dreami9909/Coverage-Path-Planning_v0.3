@@ -1,0 +1,4 @@
+condition,unique_area_coverage_ratio,detection_probability_within_limit,conditional_mean_detection_time_s,restricted_mean_detection_time_s,failure_rate_within_limit,coverage_redundancy_ratio,mean_route_distance_m,max_route_distance_m,team_total_distance_m
+independent,0.012061255338828342,0.0,,120.0,1.0,0.8333333333333334,4068.7902233211307,4068.7902233211307,24412.741339926783
+shared,0.012061255338828342,0.0,,120.0,1.0,0.8333333333333334,4068.7902233211307,4068.7902233211307,24412.741339926783
+shared-reserved,0.020912660466516884,0.0,,120.0,1.0,0.762804059966167,4129.993118294813,4304.643979013842,24779.958709768875
