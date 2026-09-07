@@ -1,0 +1,8 @@
+condition,baseline,metric,mean_difference,mean_difference_is,ci_low,ci_high,winner
+ablation-effort-greedy,proposed,detection_probability_within_limit,-0.03599999999999996,proposed-terrain-gcs-team-h1 minus condition,-0.1000874999999992,0.010500000000000042,inconclusive
+ablation-independent,proposed,detection_probability_within_limit,0.3285,proposed-terrain-gcs-team-h1 minus condition,0.27599999999999997,0.367,proposed-terrain-gcs-team-h1
+ablation-terrain-off,proposed,detection_probability_within_limit,0.14250000000000002,proposed-terrain-gcs-team-h1 minus condition,0.09400000000000004,0.1935,proposed-terrain-gcs-team-h1
+baseline-sarops-adapted,proposed,detection_probability_within_limit,0.28650000000000003,proposed-terrain-gcs-team-h1 minus condition,0.17450000000000002,0.388,proposed-terrain-gcs-team-h1
+baseline-sarops-core,proposed,detection_probability_within_limit,0.25450000000000006,proposed-terrain-gcs-team-h1 minus condition,0.168,0.339,proposed-terrain-gcs-team-h1
+candidate-overlap-aware-team-h1,proposed,detection_probability_within_limit,-0.04099999999999997,proposed-terrain-gcs-team-h1 minus condition,-0.06799999999999998,-0.011999999999999966,condition
+candidate-terrain-gcs-team-h2,proposed,detection_probability_within_limit,-0.013999999999999967,proposed-terrain-gcs-team-h1 minus condition,-0.045500000000000006,0.013000000000000057,inconclusive
